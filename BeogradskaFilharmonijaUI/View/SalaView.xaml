@@ -1,0 +1,29 @@
+﻿<Window x:Class="BeogradskaFilharmonijaUI.View.SalaView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeogradskaFilharmonijaUI.View"
+        mc:Ignorable="d"
+        Title="SalaView" Height="650" Width="660" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="DarkRed">
+
+        <TextBlock Text="Sale" Foreground="WhiteSmoke" FontSize="30" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Margin="10,40,10,520" Grid.ColumnSpan="2" />
+
+        <Button Content="Dodaj" BorderBrush="Crimson" BorderThickness="2" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="10,431,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Dodaj}" RenderTransformOrigin="0.438,1.497"/>
+        <Button Content="Obrisi" BorderBrush="Crimson" BorderThickness="2" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="456,431,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Obrisi}" Grid.ColumnSpan="2"/>
+        <Button Content="Izmeni" BorderBrush="Crimson" BorderThickness="2" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="228,431,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Izmeni}"/>
+
+        <DataGrid BorderBrush="Crimson" BorderThickness="2" ItemsSource="{Binding Path=Lista, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Izabrani}" AutoGenerateColumns="False" Height="280" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="631" SelectionMode="Single" IsReadOnly="True" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Width="*" Binding="{Binding idsal}" />
+                <DataGridTextColumn Header="Broj sedista" Width="*" Binding="{Binding brsed}" />
+                <DataGridTextColumn Header="Velicina scene" Width="*" Binding="{Binding velsce}" />
+                <DataGridTextColumn Header="Id dvorane" Width="*" Binding="{Binding dvorana_iddvor}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBlock x:Name="textBlockIspis" Foreground="White" FontSize="20" TextWrapping="Wrap" TextAlignment="Center" Margin="16,541,10,0" Height="70" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+
+    </Grid>
+</Window>

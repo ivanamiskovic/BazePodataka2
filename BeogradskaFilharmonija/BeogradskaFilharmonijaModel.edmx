@@ -1,0 +1,918 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BeogradskaFilharmonijaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="clan_klubaSet">
+          <Key>
+            <PropertyRef Name="sfr" />
+            <PropertyRef Name="posetilac_brckar_clan_kluba" />
+          </Key>
+          <Property Name="sfr" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="jmbg" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="korime" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="datrodj" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="imeck" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="prezck" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="posetilac_brckar_clan_kluba" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="djakSet">
+          <Key>
+            <PropertyRef Name="popdjak" />
+            <PropertyRef Name="sfr" />
+            <PropertyRef Name="brckar" />
+          </Key>
+          <Property Name="popdjak" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sfr" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="brckar" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="clan_kluba_sfr" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="clan_kluba_posetilac_brckar_clan_kluba" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dvoranaSet">
+          <Key>
+            <PropertyRef Name="iddvor" />
+          </Key>
+          <Property Name="iddvor" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ul" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="br" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="mest" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="nazdv" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="izvodjenjeSet">
+          <Key>
+            <PropertyRef Name="sala_dvorana_iddvor_izvodjenje" />
+            <PropertyRef Name="sala_idsal_izvodjenje" />
+            <PropertyRef Name="koncert_idkon_izvodjenje" />
+          </Key>
+          <Property Name="sala_dvorana_iddvor_izvodjenje" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sala_idsal_izvodjenje" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="koncert_idkon_izvodjenje" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="sala_idsal" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="sala_dvorana_iddvor_sala" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="kartaSet">
+          <Key>
+            <PropertyRef Name="br" />
+            <PropertyRef Name="izvodjenje_koncert_idkon_karta" />
+            <PropertyRef Name="izvodjenje_sala_idsal_karta" />
+            <PropertyRef Name="izvodjenje_sala_dvorana_iddvor_karta" />
+          </Key>
+          <Property Name="br" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="red" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="sed" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="cen" Type="float" Nullable="false" />
+          <Property Name="satiz" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="daniz" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="izvodjenje_koncert_idkon_karta" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="izvodjenje_sala_idsal_karta" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="izvodjenje_sala_dvorana_iddvor_karta" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="posetilac_brckar_karta" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="izvodjenje_sala_dvorana_iddvor_izvodjenje" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="izvodjenje_sala_idsal_izvodjenje" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="izvodjenje_koncert_idkon_izvodjenje" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="koncertorkestar">
+          <Key>
+            <PropertyRef Name="koncertSet_idkon" />
+            <PropertyRef Name="orkestarSet_id" />
+          </Key>
+          <Property Name="koncertSet_idkon" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="orkestarSet_id" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="koncertsef_dirigent">
+          <Key>
+            <PropertyRef Name="koncertSet_idkon" />
+            <PropertyRef Name="sef_dirigentSet_iddir" />
+          </Key>
+          <Property Name="koncertSet_idkon" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="sef_dirigentSet_iddir" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="koncertSet">
+          <Key>
+            <PropertyRef Name="idkon" />
+          </Key>
+          <Property Name="idkon" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nazkon" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="znrmuzik" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="traj" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="orkestarSet">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="imeork" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="brclan" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="penzionerSet">
+          <Key>
+            <PropertyRef Name="osigur" />
+            <PropertyRef Name="sfr" />
+            <PropertyRef Name="brckar" />
+          </Key>
+          <Property Name="osigur" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sfr" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="brckar" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="clan_kluba_sfr" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="clan_kluba_posetilac_brckar_clan_kluba" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="posetilacSet">
+          <Key>
+            <PropertyRef Name="brckar" />
+          </Key>
+          <Property Name="brckar" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="salaSet">
+          <Key>
+            <PropertyRef Name="idsal" />
+            <PropertyRef Name="dvorana_iddvor_sala" />
+          </Key>
+          <Property Name="idsal" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="brsed" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="velsce" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="dvorana_iddvor_sala" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="dvorana_iddvor" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sef_dirigentSet">
+          <Key>
+            <PropertyRef Name="iddir" />
+          </Key>
+          <Property Name="iddir" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="imed" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="prezdir" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="studentSet">
+          <Key>
+            <PropertyRef Name="popstud" />
+            <PropertyRef Name="sfr" />
+            <PropertyRef Name="brckar" />
+          </Key>
+          <Property Name="popstud" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sfr" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="brckar" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="clan_kluba_sfr" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="clan_kluba_posetilac_brckar_clan_kluba" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_clan_klubadjak">
+          <End Role="clan_klubaSet" Type="Self.clan_klubaSet" Multiplicity="1" />
+          <End Role="djakSet" Type="Self.djakSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="clan_klubaSet">
+              <PropertyRef Name="sfr" />
+              <PropertyRef Name="posetilac_brckar_clan_kluba" />
+            </Principal>
+            <Dependent Role="djakSet">
+              <PropertyRef Name="clan_kluba_sfr" />
+              <PropertyRef Name="clan_kluba_posetilac_brckar_clan_kluba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_clan_klubapenzioner">
+          <End Role="clan_klubaSet" Type="Self.clan_klubaSet" Multiplicity="1" />
+          <End Role="penzionerSet" Type="Self.penzionerSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="clan_klubaSet">
+              <PropertyRef Name="sfr" />
+              <PropertyRef Name="posetilac_brckar_clan_kluba" />
+            </Principal>
+            <Dependent Role="penzionerSet">
+              <PropertyRef Name="clan_kluba_sfr" />
+              <PropertyRef Name="clan_kluba_posetilac_brckar_clan_kluba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_clan_klubastudent">
+          <End Role="clan_klubaSet" Type="Self.clan_klubaSet" Multiplicity="1" />
+          <End Role="studentSet" Type="Self.studentSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="clan_klubaSet">
+              <PropertyRef Name="sfr" />
+              <PropertyRef Name="posetilac_brckar_clan_kluba" />
+            </Principal>
+            <Dependent Role="studentSet">
+              <PropertyRef Name="clan_kluba_sfr" />
+              <PropertyRef Name="clan_kluba_posetilac_brckar_clan_kluba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_izvodjenjesala">
+          <End Role="salaSet" Type="Self.salaSet" Multiplicity="1" />
+          <End Role="izvodjenjeSet" Type="Self.izvodjenjeSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="salaSet">
+              <PropertyRef Name="idsal" />
+              <PropertyRef Name="dvorana_iddvor_sala" />
+            </Principal>
+            <Dependent Role="izvodjenjeSet">
+              <PropertyRef Name="sala_idsal" />
+              <PropertyRef Name="sala_dvorana_iddvor_sala" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_kartaizvodjenje">
+          <End Role="izvodjenjeSet" Type="Self.izvodjenjeSet" Multiplicity="1" />
+          <End Role="kartaSet" Type="Self.kartaSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="izvodjenjeSet">
+              <PropertyRef Name="sala_dvorana_iddvor_izvodjenje" />
+              <PropertyRef Name="sala_idsal_izvodjenje" />
+              <PropertyRef Name="koncert_idkon_izvodjenje" />
+            </Principal>
+            <Dependent Role="kartaSet">
+              <PropertyRef Name="izvodjenje_sala_dvorana_iddvor_izvodjenje" />
+              <PropertyRef Name="izvodjenje_sala_idsal_izvodjenje" />
+              <PropertyRef Name="izvodjenje_koncert_idkon_izvodjenje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_koncertizvodjenje">
+          <End Role="koncertSet" Type="Self.koncertSet" Multiplicity="1" />
+          <End Role="izvodjenjeSet" Type="Self.izvodjenjeSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="koncertSet">
+              <PropertyRef Name="idkon" />
+            </Principal>
+            <Dependent Role="izvodjenjeSet">
+              <PropertyRef Name="koncert_idkon_izvodjenje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_koncertorkestar_koncertSet">
+          <End Role="koncertSet" Type="Self.koncertSet" Multiplicity="1" />
+          <End Role="koncertorkestar" Type="Self.koncertorkestar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="koncertSet">
+              <PropertyRef Name="idkon" />
+            </Principal>
+            <Dependent Role="koncertorkestar">
+              <PropertyRef Name="koncertSet_idkon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_koncertorkestar_orkestarSet">
+          <End Role="orkestarSet" Type="Self.orkestarSet" Multiplicity="1" />
+          <End Role="koncertorkestar" Type="Self.koncertorkestar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orkestarSet">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="koncertorkestar">
+              <PropertyRef Name="orkestarSet_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_koncertsef_dirigent_koncertSet">
+          <End Role="koncertSet" Type="Self.koncertSet" Multiplicity="1" />
+          <End Role="koncertsef_dirigent" Type="Self.koncertsef_dirigent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="koncertSet">
+              <PropertyRef Name="idkon" />
+            </Principal>
+            <Dependent Role="koncertsef_dirigent">
+              <PropertyRef Name="koncertSet_idkon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_koncertsef_dirigent_sef_dirigentSet">
+          <End Role="sef_dirigentSet" Type="Self.sef_dirigentSet" Multiplicity="1" />
+          <End Role="koncertsef_dirigent" Type="Self.koncertsef_dirigent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sef_dirigentSet">
+              <PropertyRef Name="iddir" />
+            </Principal>
+            <Dependent Role="koncertsef_dirigent">
+              <PropertyRef Name="sef_dirigentSet_iddir" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_posetilacclan_kluba">
+          <End Role="posetilacSet" Type="Self.posetilacSet" Multiplicity="1" />
+          <End Role="clan_klubaSet" Type="Self.clan_klubaSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="posetilacSet">
+              <PropertyRef Name="brckar" />
+            </Principal>
+            <Dependent Role="clan_klubaSet">
+              <PropertyRef Name="posetilac_brckar_clan_kluba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_posetilackarta">
+          <End Role="posetilacSet" Type="Self.posetilacSet" Multiplicity="0..1" />
+          <End Role="kartaSet" Type="Self.kartaSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="posetilacSet">
+              <PropertyRef Name="brckar" />
+            </Principal>
+            <Dependent Role="kartaSet">
+              <PropertyRef Name="posetilac_brckar_karta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_saladvorana">
+          <End Role="dvoranaSet" Type="Self.dvoranaSet" Multiplicity="1" />
+          <End Role="salaSet" Type="Self.salaSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dvoranaSet">
+              <PropertyRef Name="iddvor" />
+            </Principal>
+            <Dependent Role="salaSet">
+              <PropertyRef Name="dvorana_iddvor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BeogradskaFilharmonijaModelStoreContainer">
+          <EntitySet Name="clan_klubaSet" EntityType="Self.clan_klubaSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="djakSet" EntityType="Self.djakSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dvoranaSet" EntityType="Self.dvoranaSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="izvodjenjeSet" EntityType="Self.izvodjenjeSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kartaSet" EntityType="Self.kartaSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="koncertorkestar" EntityType="Self.koncertorkestar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="koncertsef_dirigent" EntityType="Self.koncertsef_dirigent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="koncertSet" EntityType="Self.koncertSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="orkestarSet" EntityType="Self.orkestarSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="penzionerSet" EntityType="Self.penzionerSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="posetilacSet" EntityType="Self.posetilacSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="salaSet" EntityType="Self.salaSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sef_dirigentSet" EntityType="Self.sef_dirigentSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="studentSet" EntityType="Self.studentSet" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_clan_klubadjak" Association="Self.FK_clan_klubadjak">
+            <End Role="clan_klubaSet" EntitySet="clan_klubaSet" />
+            <End Role="djakSet" EntitySet="djakSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_clan_klubapenzioner" Association="Self.FK_clan_klubapenzioner">
+            <End Role="clan_klubaSet" EntitySet="clan_klubaSet" />
+            <End Role="penzionerSet" EntitySet="penzionerSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_clan_klubastudent" Association="Self.FK_clan_klubastudent">
+            <End Role="clan_klubaSet" EntitySet="clan_klubaSet" />
+            <End Role="studentSet" EntitySet="studentSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_izvodjenjesala" Association="Self.FK_izvodjenjesala">
+            <End Role="salaSet" EntitySet="salaSet" />
+            <End Role="izvodjenjeSet" EntitySet="izvodjenjeSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_kartaizvodjenje" Association="Self.FK_kartaizvodjenje">
+            <End Role="izvodjenjeSet" EntitySet="izvodjenjeSet" />
+            <End Role="kartaSet" EntitySet="kartaSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_koncertizvodjenje" Association="Self.FK_koncertizvodjenje">
+            <End Role="koncertSet" EntitySet="koncertSet" />
+            <End Role="izvodjenjeSet" EntitySet="izvodjenjeSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_koncertorkestar_koncertSet" Association="Self.FK_koncertorkestar_koncertSet">
+            <End Role="koncertSet" EntitySet="koncertSet" />
+            <End Role="koncertorkestar" EntitySet="koncertorkestar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_koncertorkestar_orkestarSet" Association="Self.FK_koncertorkestar_orkestarSet">
+            <End Role="orkestarSet" EntitySet="orkestarSet" />
+            <End Role="koncertorkestar" EntitySet="koncertorkestar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_koncertsef_dirigent_koncertSet" Association="Self.FK_koncertsef_dirigent_koncertSet">
+            <End Role="koncertSet" EntitySet="koncertSet" />
+            <End Role="koncertsef_dirigent" EntitySet="koncertsef_dirigent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_koncertsef_dirigent_sef_dirigentSet" Association="Self.FK_koncertsef_dirigent_sef_dirigentSet">
+            <End Role="sef_dirigentSet" EntitySet="sef_dirigentSet" />
+            <End Role="koncertsef_dirigent" EntitySet="koncertsef_dirigent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_posetilacclan_kluba" Association="Self.FK_posetilacclan_kluba">
+            <End Role="posetilacSet" EntitySet="posetilacSet" />
+            <End Role="clan_klubaSet" EntitySet="clan_klubaSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_posetilackarta" Association="Self.FK_posetilackarta">
+            <End Role="posetilacSet" EntitySet="posetilacSet" />
+            <End Role="kartaSet" EntitySet="kartaSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_saladvorana" Association="Self.FK_saladvorana">
+            <End Role="dvoranaSet" EntitySet="dvoranaSet" />
+            <End Role="salaSet" EntitySet="salaSet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="BeogradskaFilharmonijaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="BeogradskaFilharmonijaModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="clan_klubaSet" EntityType="BeogradskaFilharmonijaModel.clan_klubaSet" />
+          <EntitySet Name="djakSet" EntityType="BeogradskaFilharmonijaModel.djakSet" />
+          <EntitySet Name="dvoranaSet" EntityType="BeogradskaFilharmonijaModel.dvoranaSet" />
+          <EntitySet Name="izvodjenjeSet" EntityType="BeogradskaFilharmonijaModel.izvodjenjeSet" />
+          <EntitySet Name="kartaSet" EntityType="BeogradskaFilharmonijaModel.kartaSet" />
+          <EntitySet Name="koncertSet" EntityType="BeogradskaFilharmonijaModel.koncertSet" />
+          <EntitySet Name="orkestarSet" EntityType="BeogradskaFilharmonijaModel.orkestarSet" />
+          <EntitySet Name="penzionerSet" EntityType="BeogradskaFilharmonijaModel.penzionerSet" />
+          <EntitySet Name="posetilacSet" EntityType="BeogradskaFilharmonijaModel.posetilacSet" />
+          <EntitySet Name="salaSet" EntityType="BeogradskaFilharmonijaModel.salaSet" />
+          <EntitySet Name="sef_dirigentSet" EntityType="BeogradskaFilharmonijaModel.sef_dirigentSet" />
+          <EntitySet Name="studentSet" EntityType="BeogradskaFilharmonijaModel.studentSet" />
+          <AssociationSet Name="FK_clan_klubadjak" Association="BeogradskaFilharmonijaModel.FK_clan_klubadjak">
+            <End Role="clan_klubaSet" EntitySet="clan_klubaSet" />
+            <End Role="djakSet" EntitySet="djakSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_clan_klubapenzioner" Association="BeogradskaFilharmonijaModel.FK_clan_klubapenzioner">
+            <End Role="clan_klubaSet" EntitySet="clan_klubaSet" />
+            <End Role="penzionerSet" EntitySet="penzionerSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_clan_klubastudent" Association="BeogradskaFilharmonijaModel.FK_clan_klubastudent">
+            <End Role="clan_klubaSet" EntitySet="clan_klubaSet" />
+            <End Role="studentSet" EntitySet="studentSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_posetilacclan_kluba" Association="BeogradskaFilharmonijaModel.FK_posetilacclan_kluba">
+            <End Role="posetilacSet" EntitySet="posetilacSet" />
+            <End Role="clan_klubaSet" EntitySet="clan_klubaSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_saladvorana" Association="BeogradskaFilharmonijaModel.FK_saladvorana">
+            <End Role="dvoranaSet" EntitySet="dvoranaSet" />
+            <End Role="salaSet" EntitySet="salaSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_izvodjenjesala" Association="BeogradskaFilharmonijaModel.FK_izvodjenjesala">
+            <End Role="salaSet" EntitySet="salaSet" />
+            <End Role="izvodjenjeSet" EntitySet="izvodjenjeSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_kartaizvodjenje" Association="BeogradskaFilharmonijaModel.FK_kartaizvodjenje">
+            <End Role="izvodjenjeSet" EntitySet="izvodjenjeSet" />
+            <End Role="kartaSet" EntitySet="kartaSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_koncertizvodjenje" Association="BeogradskaFilharmonijaModel.FK_koncertizvodjenje">
+            <End Role="koncertSet" EntitySet="koncertSet" />
+            <End Role="izvodjenjeSet" EntitySet="izvodjenjeSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_posetilackarta" Association="BeogradskaFilharmonijaModel.FK_posetilackarta">
+            <End Role="posetilacSet" EntitySet="posetilacSet" />
+            <End Role="kartaSet" EntitySet="kartaSet" />
+          </AssociationSet>
+          <AssociationSet Name="koncertorkestar" Association="BeogradskaFilharmonijaModel.koncertorkestar">
+            <End Role="koncertSet" EntitySet="koncertSet" />
+            <End Role="orkestarSet" EntitySet="orkestarSet" />
+          </AssociationSet>
+          <AssociationSet Name="koncertsef_dirigent" Association="BeogradskaFilharmonijaModel.koncertsef_dirigent">
+            <End Role="koncertSet" EntitySet="koncertSet" />
+            <End Role="sef_dirigentSet" EntitySet="sef_dirigentSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="clan_klubaSet">
+          <Key>
+            <PropertyRef Name="sfr" />
+            <PropertyRef Name="posetilac_brckar_clan_kluba" />
+          </Key>
+          <Property Name="sfr" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="jmbg" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="korime" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="datrodj" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="imeck" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="prezck" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="posetilac_brckar_clan_kluba" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="djakSet" Relationship="BeogradskaFilharmonijaModel.FK_clan_klubadjak" FromRole="clan_klubaSet" ToRole="djakSet" />
+          <NavigationProperty Name="penzionerSet" Relationship="BeogradskaFilharmonijaModel.FK_clan_klubapenzioner" FromRole="clan_klubaSet" ToRole="penzionerSet" />
+          <NavigationProperty Name="studentSet" Relationship="BeogradskaFilharmonijaModel.FK_clan_klubastudent" FromRole="clan_klubaSet" ToRole="studentSet" />
+          <NavigationProperty Name="posetilacSet" Relationship="BeogradskaFilharmonijaModel.FK_posetilacclan_kluba" FromRole="clan_klubaSet" ToRole="posetilacSet" />
+        </EntityType>
+        <EntityType Name="djakSet">
+          <Key>
+            <PropertyRef Name="popdjak" />
+            <PropertyRef Name="sfr" />
+            <PropertyRef Name="brckar" />
+          </Key>
+          <Property Name="popdjak" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sfr" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="brckar" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="clan_kluba_sfr" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="clan_kluba_posetilac_brckar_clan_kluba" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="clan_klubaSet" Relationship="BeogradskaFilharmonijaModel.FK_clan_klubadjak" FromRole="djakSet" ToRole="clan_klubaSet" />
+        </EntityType>
+        <EntityType Name="dvoranaSet">
+          <Key>
+            <PropertyRef Name="iddvor" />
+          </Key>
+          <Property Name="iddvor" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ul" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="br" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="mest" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="nazdv" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="salaSet" Relationship="BeogradskaFilharmonijaModel.FK_saladvorana" FromRole="dvoranaSet" ToRole="salaSet" />
+        </EntityType>
+        <EntityType Name="izvodjenjeSet">
+          <Key>
+            <PropertyRef Name="sala_dvorana_iddvor_izvodjenje" />
+            <PropertyRef Name="sala_idsal_izvodjenje" />
+            <PropertyRef Name="koncert_idkon_izvodjenje" />
+          </Key>
+          <Property Name="sala_dvorana_iddvor_izvodjenje" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sala_idsal_izvodjenje" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="koncert_idkon_izvodjenje" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="sala_idsal" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="sala_dvorana_iddvor_sala" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="salaSet" Relationship="BeogradskaFilharmonijaModel.FK_izvodjenjesala" FromRole="izvodjenjeSet" ToRole="salaSet" />
+          <NavigationProperty Name="kartaSet" Relationship="BeogradskaFilharmonijaModel.FK_kartaizvodjenje" FromRole="izvodjenjeSet" ToRole="kartaSet" />
+          <NavigationProperty Name="koncertSet" Relationship="BeogradskaFilharmonijaModel.FK_koncertizvodjenje" FromRole="izvodjenjeSet" ToRole="koncertSet" />
+        </EntityType>
+        <EntityType Name="kartaSet">
+          <Key>
+            <PropertyRef Name="br" />
+            <PropertyRef Name="izvodjenje_koncert_idkon_karta" />
+            <PropertyRef Name="izvodjenje_sala_idsal_karta" />
+            <PropertyRef Name="izvodjenje_sala_dvorana_iddvor_karta" />
+          </Key>
+          <Property Name="br" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="red" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="sed" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="cen" Type="Double" Nullable="false" />
+          <Property Name="satiz" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="daniz" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="izvodjenje_koncert_idkon_karta" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="izvodjenje_sala_idsal_karta" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="izvodjenje_sala_dvorana_iddvor_karta" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="posetilac_brckar_karta" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="izvodjenje_sala_dvorana_iddvor_izvodjenje" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="izvodjenje_sala_idsal_izvodjenje" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="izvodjenje_koncert_idkon_izvodjenje" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="izvodjenjeSet" Relationship="BeogradskaFilharmonijaModel.FK_kartaizvodjenje" FromRole="kartaSet" ToRole="izvodjenjeSet" />
+          <NavigationProperty Name="posetilacSet" Relationship="BeogradskaFilharmonijaModel.FK_posetilackarta" FromRole="kartaSet" ToRole="posetilacSet" />
+        </EntityType>
+        <EntityType Name="koncertSet">
+          <Key>
+            <PropertyRef Name="idkon" />
+          </Key>
+          <Property Name="idkon" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nazkon" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="znrmuzik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="traj" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="izvodjenjeSet" Relationship="BeogradskaFilharmonijaModel.FK_koncertizvodjenje" FromRole="koncertSet" ToRole="izvodjenjeSet" />
+          <NavigationProperty Name="orkestarSet" Relationship="BeogradskaFilharmonijaModel.koncertorkestar" FromRole="koncertSet" ToRole="orkestarSet" />
+          <NavigationProperty Name="sef_dirigentSet" Relationship="BeogradskaFilharmonijaModel.koncertsef_dirigent" FromRole="koncertSet" ToRole="sef_dirigentSet" />
+        </EntityType>
+        <EntityType Name="orkestarSet">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="imeork" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="brclan" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="koncertSet" Relationship="BeogradskaFilharmonijaModel.koncertorkestar" FromRole="orkestarSet" ToRole="koncertSet" />
+        </EntityType>
+        <EntityType Name="penzionerSet">
+          <Key>
+            <PropertyRef Name="osigur" />
+            <PropertyRef Name="sfr" />
+            <PropertyRef Name="brckar" />
+          </Key>
+          <Property Name="osigur" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sfr" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="brckar" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="clan_kluba_sfr" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="clan_kluba_posetilac_brckar_clan_kluba" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="clan_klubaSet" Relationship="BeogradskaFilharmonijaModel.FK_clan_klubapenzioner" FromRole="penzionerSet" ToRole="clan_klubaSet" />
+        </EntityType>
+        <EntityType Name="posetilacSet">
+          <Key>
+            <PropertyRef Name="brckar" />
+          </Key>
+          <Property Name="brckar" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="clan_klubaSet" Relationship="BeogradskaFilharmonijaModel.FK_posetilacclan_kluba" FromRole="posetilacSet" ToRole="clan_klubaSet" />
+          <NavigationProperty Name="kartaSet" Relationship="BeogradskaFilharmonijaModel.FK_posetilackarta" FromRole="posetilacSet" ToRole="kartaSet" />
+        </EntityType>
+        <EntityType Name="salaSet">
+          <Key>
+            <PropertyRef Name="idsal" />
+            <PropertyRef Name="dvorana_iddvor_sala" />
+          </Key>
+          <Property Name="idsal" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="brsed" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="velsce" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dvorana_iddvor_sala" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="dvorana_iddvor" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="dvoranaSet" Relationship="BeogradskaFilharmonijaModel.FK_saladvorana" FromRole="salaSet" ToRole="dvoranaSet" />
+          <NavigationProperty Name="izvodjenjeSet" Relationship="BeogradskaFilharmonijaModel.FK_izvodjenjesala" FromRole="salaSet" ToRole="izvodjenjeSet" />
+        </EntityType>
+        <EntityType Name="sef_dirigentSet">
+          <Key>
+            <PropertyRef Name="iddir" />
+          </Key>
+          <Property Name="iddir" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="imed" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="prezdir" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="koncertSet" Relationship="BeogradskaFilharmonijaModel.koncertsef_dirigent" FromRole="sef_dirigentSet" ToRole="koncertSet" />
+        </EntityType>
+        <EntityType Name="studentSet">
+          <Key>
+            <PropertyRef Name="popstud" />
+            <PropertyRef Name="sfr" />
+            <PropertyRef Name="brckar" />
+          </Key>
+          <Property Name="popstud" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sfr" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="brckar" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="clan_kluba_sfr" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="clan_kluba_posetilac_brckar_clan_kluba" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="clan_klubaSet" Relationship="BeogradskaFilharmonijaModel.FK_clan_klubastudent" FromRole="studentSet" ToRole="clan_klubaSet" />
+        </EntityType>
+        <Association Name="FK_clan_klubadjak">
+          <End Type="BeogradskaFilharmonijaModel.clan_klubaSet" Role="clan_klubaSet" Multiplicity="1" />
+          <End Type="BeogradskaFilharmonijaModel.djakSet" Role="djakSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="clan_klubaSet">
+              <PropertyRef Name="sfr" />
+              <PropertyRef Name="posetilac_brckar_clan_kluba" />
+            </Principal>
+            <Dependent Role="djakSet">
+              <PropertyRef Name="clan_kluba_sfr" />
+              <PropertyRef Name="clan_kluba_posetilac_brckar_clan_kluba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_clan_klubapenzioner">
+          <End Type="BeogradskaFilharmonijaModel.clan_klubaSet" Role="clan_klubaSet" Multiplicity="1" />
+          <End Type="BeogradskaFilharmonijaModel.penzionerSet" Role="penzionerSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="clan_klubaSet">
+              <PropertyRef Name="sfr" />
+              <PropertyRef Name="posetilac_brckar_clan_kluba" />
+            </Principal>
+            <Dependent Role="penzionerSet">
+              <PropertyRef Name="clan_kluba_sfr" />
+              <PropertyRef Name="clan_kluba_posetilac_brckar_clan_kluba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_clan_klubastudent">
+          <End Type="BeogradskaFilharmonijaModel.clan_klubaSet" Role="clan_klubaSet" Multiplicity="1" />
+          <End Type="BeogradskaFilharmonijaModel.studentSet" Role="studentSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="clan_klubaSet">
+              <PropertyRef Name="sfr" />
+              <PropertyRef Name="posetilac_brckar_clan_kluba" />
+            </Principal>
+            <Dependent Role="studentSet">
+              <PropertyRef Name="clan_kluba_sfr" />
+              <PropertyRef Name="clan_kluba_posetilac_brckar_clan_kluba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_posetilacclan_kluba">
+          <End Type="BeogradskaFilharmonijaModel.posetilacSet" Role="posetilacSet" Multiplicity="1" />
+          <End Type="BeogradskaFilharmonijaModel.clan_klubaSet" Role="clan_klubaSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="posetilacSet">
+              <PropertyRef Name="brckar" />
+            </Principal>
+            <Dependent Role="clan_klubaSet">
+              <PropertyRef Name="posetilac_brckar_clan_kluba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_saladvorana">
+          <End Type="BeogradskaFilharmonijaModel.dvoranaSet" Role="dvoranaSet" Multiplicity="1" />
+          <End Type="BeogradskaFilharmonijaModel.salaSet" Role="salaSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dvoranaSet">
+              <PropertyRef Name="iddvor" />
+            </Principal>
+            <Dependent Role="salaSet">
+              <PropertyRef Name="dvorana_iddvor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_izvodjenjesala">
+          <End Type="BeogradskaFilharmonijaModel.salaSet" Role="salaSet" Multiplicity="1" />
+          <End Type="BeogradskaFilharmonijaModel.izvodjenjeSet" Role="izvodjenjeSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="salaSet">
+              <PropertyRef Name="idsal" />
+              <PropertyRef Name="dvorana_iddvor_sala" />
+            </Principal>
+            <Dependent Role="izvodjenjeSet">
+              <PropertyRef Name="sala_idsal" />
+              <PropertyRef Name="sala_dvorana_iddvor_sala" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_kartaizvodjenje">
+          <End Type="BeogradskaFilharmonijaModel.izvodjenjeSet" Role="izvodjenjeSet" Multiplicity="1" />
+          <End Type="BeogradskaFilharmonijaModel.kartaSet" Role="kartaSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="izvodjenjeSet">
+              <PropertyRef Name="sala_dvorana_iddvor_izvodjenje" />
+              <PropertyRef Name="sala_idsal_izvodjenje" />
+              <PropertyRef Name="koncert_idkon_izvodjenje" />
+            </Principal>
+            <Dependent Role="kartaSet">
+              <PropertyRef Name="izvodjenje_sala_dvorana_iddvor_izvodjenje" />
+              <PropertyRef Name="izvodjenje_sala_idsal_izvodjenje" />
+              <PropertyRef Name="izvodjenje_koncert_idkon_izvodjenje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_koncertizvodjenje">
+          <End Type="BeogradskaFilharmonijaModel.koncertSet" Role="koncertSet" Multiplicity="1" />
+          <End Type="BeogradskaFilharmonijaModel.izvodjenjeSet" Role="izvodjenjeSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="koncertSet">
+              <PropertyRef Name="idkon" />
+            </Principal>
+            <Dependent Role="izvodjenjeSet">
+              <PropertyRef Name="koncert_idkon_izvodjenje" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_posetilackarta">
+          <End Type="BeogradskaFilharmonijaModel.posetilacSet" Role="posetilacSet" Multiplicity="0..1" />
+          <End Type="BeogradskaFilharmonijaModel.kartaSet" Role="kartaSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="posetilacSet">
+              <PropertyRef Name="brckar" />
+            </Principal>
+            <Dependent Role="kartaSet">
+              <PropertyRef Name="posetilac_brckar_karta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="koncertorkestar">
+          <End Type="BeogradskaFilharmonijaModel.koncertSet" Role="koncertSet" Multiplicity="*" />
+          <End Type="BeogradskaFilharmonijaModel.orkestarSet" Role="orkestarSet" Multiplicity="*" />
+        </Association>
+        <Association Name="koncertsef_dirigent">
+          <End Type="BeogradskaFilharmonijaModel.koncertSet" Role="koncertSet" Multiplicity="*" />
+          <End Type="BeogradskaFilharmonijaModel.sef_dirigentSet" Role="sef_dirigentSet" Multiplicity="*" />
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BeogradskaFilharmonijaModelStoreContainer" CdmEntityContainer="BeogradskaFilharmonijaModelContainer">
+          <EntitySetMapping Name="clan_klubaSet">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.clan_klubaSet">
+              <MappingFragment StoreEntitySet="clan_klubaSet">
+                <ScalarProperty Name="posetilac_brckar_clan_kluba" ColumnName="posetilac_brckar_clan_kluba" />
+                <ScalarProperty Name="prezck" ColumnName="prezck" />
+                <ScalarProperty Name="imeck" ColumnName="imeck" />
+                <ScalarProperty Name="datrodj" ColumnName="datrodj" />
+                <ScalarProperty Name="korime" ColumnName="korime" />
+                <ScalarProperty Name="jmbg" ColumnName="jmbg" />
+                <ScalarProperty Name="sfr" ColumnName="sfr" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="djakSet">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.djakSet">
+              <MappingFragment StoreEntitySet="djakSet">
+                <ScalarProperty Name="clan_kluba_posetilac_brckar_clan_kluba" ColumnName="clan_kluba_posetilac_brckar_clan_kluba" />
+                <ScalarProperty Name="clan_kluba_sfr" ColumnName="clan_kluba_sfr" />
+                <ScalarProperty Name="brckar" ColumnName="brckar" />
+                <ScalarProperty Name="sfr" ColumnName="sfr" />
+                <ScalarProperty Name="popdjak" ColumnName="popdjak" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dvoranaSet">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.dvoranaSet">
+              <MappingFragment StoreEntitySet="dvoranaSet">
+                <ScalarProperty Name="nazdv" ColumnName="nazdv" />
+                <ScalarProperty Name="mest" ColumnName="mest" />
+                <ScalarProperty Name="br" ColumnName="br" />
+                <ScalarProperty Name="ul" ColumnName="ul" />
+                <ScalarProperty Name="iddvor" ColumnName="iddvor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="izvodjenjeSet">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.izvodjenjeSet">
+              <MappingFragment StoreEntitySet="izvodjenjeSet">
+                <ScalarProperty Name="sala_dvorana_iddvor_sala" ColumnName="sala_dvorana_iddvor_sala" />
+                <ScalarProperty Name="sala_idsal" ColumnName="sala_idsal" />
+                <ScalarProperty Name="koncert_idkon_izvodjenje" ColumnName="koncert_idkon_izvodjenje" />
+                <ScalarProperty Name="sala_idsal_izvodjenje" ColumnName="sala_idsal_izvodjenje" />
+                <ScalarProperty Name="sala_dvorana_iddvor_izvodjenje" ColumnName="sala_dvorana_iddvor_izvodjenje" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kartaSet">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.kartaSet">
+              <MappingFragment StoreEntitySet="kartaSet">
+                <ScalarProperty Name="izvodjenje_koncert_idkon_izvodjenje" ColumnName="izvodjenje_koncert_idkon_izvodjenje" />
+                <ScalarProperty Name="izvodjenje_sala_idsal_izvodjenje" ColumnName="izvodjenje_sala_idsal_izvodjenje" />
+                <ScalarProperty Name="izvodjenje_sala_dvorana_iddvor_izvodjenje" ColumnName="izvodjenje_sala_dvorana_iddvor_izvodjenje" />
+                <ScalarProperty Name="posetilac_brckar_karta" ColumnName="posetilac_brckar_karta" />
+                <ScalarProperty Name="izvodjenje_sala_dvorana_iddvor_karta" ColumnName="izvodjenje_sala_dvorana_iddvor_karta" />
+                <ScalarProperty Name="izvodjenje_sala_idsal_karta" ColumnName="izvodjenje_sala_idsal_karta" />
+                <ScalarProperty Name="izvodjenje_koncert_idkon_karta" ColumnName="izvodjenje_koncert_idkon_karta" />
+                <ScalarProperty Name="daniz" ColumnName="daniz" />
+                <ScalarProperty Name="satiz" ColumnName="satiz" />
+                <ScalarProperty Name="cen" ColumnName="cen" />
+                <ScalarProperty Name="sed" ColumnName="sed" />
+                <ScalarProperty Name="red" ColumnName="red" />
+                <ScalarProperty Name="br" ColumnName="br" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="koncertSet">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.koncertSet">
+              <MappingFragment StoreEntitySet="koncertSet">
+                <ScalarProperty Name="traj" ColumnName="traj" />
+                <ScalarProperty Name="znrmuzik" ColumnName="znrmuzik" />
+                <ScalarProperty Name="nazkon" ColumnName="nazkon" />
+                <ScalarProperty Name="idkon" ColumnName="idkon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="orkestarSet">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.orkestarSet">
+              <MappingFragment StoreEntitySet="orkestarSet">
+                <ScalarProperty Name="brclan" ColumnName="brclan" />
+                <ScalarProperty Name="imeork" ColumnName="imeork" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="penzionerSet">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.penzionerSet">
+              <MappingFragment StoreEntitySet="penzionerSet">
+                <ScalarProperty Name="clan_kluba_posetilac_brckar_clan_kluba" ColumnName="clan_kluba_posetilac_brckar_clan_kluba" />
+                <ScalarProperty Name="clan_kluba_sfr" ColumnName="clan_kluba_sfr" />
+                <ScalarProperty Name="brckar" ColumnName="brckar" />
+                <ScalarProperty Name="sfr" ColumnName="sfr" />
+                <ScalarProperty Name="osigur" ColumnName="osigur" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="posetilacSet">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.posetilacSet">
+              <MappingFragment StoreEntitySet="posetilacSet">
+                <ScalarProperty Name="brckar" ColumnName="brckar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="salaSet">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.salaSet">
+              <MappingFragment StoreEntitySet="salaSet">
+                <ScalarProperty Name="dvorana_iddvor" ColumnName="dvorana_iddvor" />
+                <ScalarProperty Name="dvorana_iddvor_sala" ColumnName="dvorana_iddvor_sala" />
+                <ScalarProperty Name="velsce" ColumnName="velsce" />
+                <ScalarProperty Name="brsed" ColumnName="brsed" />
+                <ScalarProperty Name="idsal" ColumnName="idsal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sef_dirigentSet">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.sef_dirigentSet">
+              <MappingFragment StoreEntitySet="sef_dirigentSet">
+                <ScalarProperty Name="prezdir" ColumnName="prezdir" />
+                <ScalarProperty Name="imed" ColumnName="imed" />
+                <ScalarProperty Name="iddir" ColumnName="iddir" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="studentSet">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.studentSet">
+              <MappingFragment StoreEntitySet="studentSet">
+                <ScalarProperty Name="clan_kluba_posetilac_brckar_clan_kluba" ColumnName="clan_kluba_posetilac_brckar_clan_kluba" />
+                <ScalarProperty Name="clan_kluba_sfr" ColumnName="clan_kluba_sfr" />
+                <ScalarProperty Name="brckar" ColumnName="brckar" />
+                <ScalarProperty Name="sfr" ColumnName="sfr" />
+                <ScalarProperty Name="popstud" ColumnName="popstud" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="koncertorkestar" TypeName="BeogradskaFilharmonijaModel.koncertorkestar" StoreEntitySet="koncertorkestar">
+            <EndProperty Name="orkestarSet">
+              <ScalarProperty Name="id" ColumnName="orkestarSet_id" />
+            </EndProperty>
+            <EndProperty Name="koncertSet">
+              <ScalarProperty Name="idkon" ColumnName="koncertSet_idkon" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="koncertsef_dirigent" TypeName="BeogradskaFilharmonijaModel.koncertsef_dirigent" StoreEntitySet="koncertsef_dirigent">
+            <EndProperty Name="sef_dirigentSet">
+              <ScalarProperty Name="iddir" ColumnName="sef_dirigentSet_iddir" />
+            </EndProperty>
+            <EndProperty Name="koncertSet">
+              <ScalarProperty Name="idkon" ColumnName="koncertSet_idkon" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

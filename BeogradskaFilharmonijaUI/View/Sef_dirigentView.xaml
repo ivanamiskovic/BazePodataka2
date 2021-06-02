@@ -1,0 +1,27 @@
+﻿<Window x:Class="BeogradskaFilharmonijaUI.View.Sef_dirigentView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeogradskaFilharmonijaUI.View"
+        mc:Ignorable="d"
+        Title="Sef_dirigentView" Height="650" Width="650" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="DarkRed">
+        <TextBlock Text="Sef dirigent" Foreground="WhiteSmoke" FontWeight="Bold" FontSize="30" TextWrapping="Wrap" TextAlignment="Center" Margin="10,33,10,522" />
+
+        <Button Content="Dodaj" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" HorizontalAlignment="Left" Margin="10,441,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Dodaj}"/>
+        <Button Content="Obrisi" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" HorizontalAlignment="Left" Margin="442,441,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Obrisi}"/>
+        <Button Content="Izmeni" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" HorizontalAlignment="Left" Margin="229,441,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Izmeni}" RenderTransformOrigin="0.382,2.192"/>
+
+        <DataGrid ItemsSource="{Binding Path=Lista, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Izabrani}" AutoGenerateColumns="False" Height="280" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="617" SelectionMode="Single" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Width="*" Binding="{Binding iddir}" />
+                <DataGridTextColumn Header="Ime" Width="*" Binding="{Binding imed}" />
+                <DataGridTextColumn Header="Prezime" Width="*" Binding="{Binding prezdir}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBlock x:Name="textBlockIspis" Foreground="White" FontSize="20" TextWrapping="Wrap" TextAlignment="Center" Margin="17,531,10,30" />
+
+    </Grid>
+</Window>

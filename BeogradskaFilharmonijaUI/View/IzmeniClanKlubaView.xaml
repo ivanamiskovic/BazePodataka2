@@ -1,0 +1,43 @@
+﻿<Window x:Class="BeogradskaFilharmonijaUI.View.IzmeniClanKlubaView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeogradskaFilharmonijaUI.View"
+        mc:Ignorable="d"
+        Title="IzmeniClanKlubaView" Height="500" Width="310" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="DarkRed" Margin="0,-27,-6.4,-0.4">
+        <Label Content="Sifra :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="23" Margin="123,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="TextBox_TextChanged"/>
+        <TextBlock x:Name="textBlock" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,41,0,0" Width="272" Height="25" />
+
+        <Label Content="JMBG :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="textBox1" BorderBrush="Crimson" BorderThickness="2"  HorizontalAlignment="Left" Height="23" Margin="123,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="TextBox1_TextChanged"/>
+        <TextBlock x:Name="textBlock1" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,94,0,0" Width="272" Height="25" />
+
+        <Label Content="Ime clana :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Width="103"/>
+        <TextBox x:Name="textBox2" BorderBrush="Crimson" BorderThickness="2"  HorizontalAlignment="Left" Height="23" Margin="123,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="TextBox2_TextChanged"/>
+        <TextBlock x:Name="textBlock2" TextWrapping="Wrap" TextAlignment="Center" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,152,0,0" Width="272" Height="25" />
+
+        <Label Content="Prezime clana :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top" Width="103"/>
+        <TextBox x:Name="textBox3" BorderBrush="Crimson" BorderThickness="2"  HorizontalAlignment="Left" Height="23" Margin="123,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="TextBox3_TextChanged"/>
+        <TextBlock x:Name="textBlock3" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,213,0,0" Width="272" Height="25" />
+
+        <Label Content="Korisnicko ime :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,243,0,0" VerticalAlignment="Top" Width="103"/>
+        <TextBox x:Name="textBox4" BorderBrush="Crimson" BorderThickness="2"  HorizontalAlignment="Left" Height="23" Margin="123,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="TextBox4_TextChanged"/>
+        <TextBlock x:Name="textBlock4" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,274,0,0" Width="272" Height="25" />
+
+        <Label Content="Datum rodjenja :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,304,0,0" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name="textBox5" BorderBrush="Crimson" BorderThickness="2"  HorizontalAlignment="Left" Height="23" Margin="123,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="TextBox5_TextChanged"/>
+        <TextBlock x:Name="textBlock5" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,335,0,0" Width="272" Height="25" />
+
+        <Label Content="Posetilac :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,365,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox x:Name="comboBox1" BorderBrush="Crimson" BorderThickness="2"  HorizontalAlignment="Left"  Margin="123,365,0,0" VerticalAlignment="Top" Width="177" IsEnabled="False"/>
+
+        <Button x:Name="izmeni" Foreground="WhiteSmoke" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="2" Content="Izmeni" HorizontalAlignment="Left" Margin="10,423,0,0" VerticalAlignment="Top" Width="75" Click="Izmeni_Click"/>
+        <Button x:Name="vrati_se" Foreground="WhiteSmoke" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="2" Content="Vrati se" HorizontalAlignment="Left" Margin="224,422,0,0" VerticalAlignment="Top" Width="76" Click="Vrati_se_Click" Height="23"/>
+
+        <TextBlock x:Name="textBlockUspeh" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,456,0,0" Width="290" Height="25" />
+
+    </Grid>
+</Window>

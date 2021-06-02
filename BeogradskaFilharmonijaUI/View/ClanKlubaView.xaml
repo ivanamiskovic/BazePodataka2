@@ -1,0 +1,31 @@
+﻿<Window x:Class="BeogradskaFilharmonijaUI.View.ClanKlubaView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeogradskaFilharmonijaUI.View"
+        mc:Ignorable="d"
+        Title="ClanKlubaView" Height="630" Width="650" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="Purple">
+        <TextBlock Text="Clan kluba" Foreground="WhiteSmoke" FontSize="30" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Margin="10,34,10,527" />
+
+        <Button Content="Dodaj" BorderBrush="Purple" BorderThickness="2" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="10,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Dodaj}"/>
+        <Button Content="Obrisi" BorderBrush="Purple" BorderThickness="2" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="226,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Obrisi}"/>
+        <Button Content="Izmeni" BorderBrush="Purple" BorderThickness="2" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="443,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Izmeni}"/>
+
+        <DataGrid BorderBrush="Crimson" BorderThickness="2" ItemsSource="{Binding Path=Lista, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Izabrani}" AutoGenerateColumns="False" Height="280" HorizontalAlignment="Left" Margin="5,130,0,0" VerticalAlignment="Top" Width="629" SelectionMode="Single" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Sifra" Width="*" Binding="{Binding sfr}" />
+                <DataGridTextColumn Header="JMBG" Width="*" Binding="{Binding jmbg}" />
+                <DataGridTextColumn Header="Ime" Width="*" Binding="{Binding imeck}" />
+                <DataGridTextColumn Header="Prezime" Width="*" Binding="{Binding prezck}" />
+                <DataGridTextColumn Header="Korisnicko ime" Width="*" Binding="{Binding korime}" />
+                <DataGridTextColumn Header="Datum rodjenja" Width="*" Binding="{Binding datrodj}" />
+                <DataGridTextColumn Header="ID posetioica" Width="*" Binding="{Binding posetilac_brckarte}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBlock x:Name="textBlockIspis" Foreground="White" FontSize="20" TextWrapping="Wrap" TextAlignment="Center" Margin="10,525,16,0" Height="52" VerticalAlignment="Top" />
+
+    </Grid>
+</Window>

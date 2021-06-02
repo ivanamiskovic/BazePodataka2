@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BeogradskaFilharmonijaModelStoreContainer" CdmEntityContainer="BeogradskaFilharmonijaModelContainer">
+    <EntitySetMapping Name="clan_klubaSet">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.clan_klubaSet">
+        <MappingFragment StoreEntitySet="clan_klubaSet">
+          <ScalarProperty Name="posetilac_brckar_clan_kluba" ColumnName="posetilac_brckar_clan_kluba" />
+          <ScalarProperty Name="prezck" ColumnName="prezck" />
+          <ScalarProperty Name="imeck" ColumnName="imeck" />
+          <ScalarProperty Name="datrodj" ColumnName="datrodj" />
+          <ScalarProperty Name="korime" ColumnName="korime" />
+          <ScalarProperty Name="jmbg" ColumnName="jmbg" />
+          <ScalarProperty Name="sfr" ColumnName="sfr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="djakSet">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.djakSet">
+        <MappingFragment StoreEntitySet="djakSet">
+          <ScalarProperty Name="clan_kluba_posetilac_brckar_clan_kluba" ColumnName="clan_kluba_posetilac_brckar_clan_kluba" />
+          <ScalarProperty Name="clan_kluba_sfr" ColumnName="clan_kluba_sfr" />
+          <ScalarProperty Name="brckar" ColumnName="brckar" />
+          <ScalarProperty Name="sfr" ColumnName="sfr" />
+          <ScalarProperty Name="popdjak" ColumnName="popdjak" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dvoranaSet">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.dvoranaSet">
+        <MappingFragment StoreEntitySet="dvoranaSet">
+          <ScalarProperty Name="nazdv" ColumnName="nazdv" />
+          <ScalarProperty Name="mest" ColumnName="mest" />
+          <ScalarProperty Name="br" ColumnName="br" />
+          <ScalarProperty Name="ul" ColumnName="ul" />
+          <ScalarProperty Name="iddvor" ColumnName="iddvor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="izvodjenjeSet">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.izvodjenjeSet">
+        <MappingFragment StoreEntitySet="izvodjenjeSet">
+          <ScalarProperty Name="sala_dvorana_iddvor_sala" ColumnName="sala_dvorana_iddvor_sala" />
+          <ScalarProperty Name="sala_idsal" ColumnName="sala_idsal" />
+          <ScalarProperty Name="koncert_idkon_izvodjenje" ColumnName="koncert_idkon_izvodjenje" />
+          <ScalarProperty Name="sala_idsal_izvodjenje" ColumnName="sala_idsal_izvodjenje" />
+          <ScalarProperty Name="sala_dvorana_iddvor_izvodjenje" ColumnName="sala_dvorana_iddvor_izvodjenje" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kartaSet">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.kartaSet">
+        <MappingFragment StoreEntitySet="kartaSet">
+          <ScalarProperty Name="izvodjenje_koncert_idkon_izvodjenje" ColumnName="izvodjenje_koncert_idkon_izvodjenje" />
+          <ScalarProperty Name="izvodjenje_sala_idsal_izvodjenje" ColumnName="izvodjenje_sala_idsal_izvodjenje" />
+          <ScalarProperty Name="izvodjenje_sala_dvorana_iddvor_izvodjenje" ColumnName="izvodjenje_sala_dvorana_iddvor_izvodjenje" />
+          <ScalarProperty Name="posetilac_brckar_karta" ColumnName="posetilac_brckar_karta" />
+          <ScalarProperty Name="izvodjenje_sala_dvorana_iddvor_karta" ColumnName="izvodjenje_sala_dvorana_iddvor_karta" />
+          <ScalarProperty Name="izvodjenje_sala_idsal_karta" ColumnName="izvodjenje_sala_idsal_karta" />
+          <ScalarProperty Name="izvodjenje_koncert_idkon_karta" ColumnName="izvodjenje_koncert_idkon_karta" />
+          <ScalarProperty Name="daniz" ColumnName="daniz" />
+          <ScalarProperty Name="satiz" ColumnName="satiz" />
+          <ScalarProperty Name="cen" ColumnName="cen" />
+          <ScalarProperty Name="sed" ColumnName="sed" />
+          <ScalarProperty Name="red" ColumnName="red" />
+          <ScalarProperty Name="br" ColumnName="br" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="koncertSet">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.koncertSet">
+        <MappingFragment StoreEntitySet="koncertSet">
+          <ScalarProperty Name="traj" ColumnName="traj" />
+          <ScalarProperty Name="znrmuzik" ColumnName="znrmuzik" />
+          <ScalarProperty Name="nazkon" ColumnName="nazkon" />
+          <ScalarProperty Name="idkon" ColumnName="idkon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orkestarSet">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.orkestarSet">
+        <MappingFragment StoreEntitySet="orkestarSet">
+          <ScalarProperty Name="brclan" ColumnName="brclan" />
+          <ScalarProperty Name="imeork" ColumnName="imeork" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="penzionerSet">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.penzionerSet">
+        <MappingFragment StoreEntitySet="penzionerSet">
+          <ScalarProperty Name="clan_kluba_posetilac_brckar_clan_kluba" ColumnName="clan_kluba_posetilac_brckar_clan_kluba" />
+          <ScalarProperty Name="clan_kluba_sfr" ColumnName="clan_kluba_sfr" />
+          <ScalarProperty Name="brckar" ColumnName="brckar" />
+          <ScalarProperty Name="sfr" ColumnName="sfr" />
+          <ScalarProperty Name="osigur" ColumnName="osigur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="posetilacSet">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.posetilacSet">
+        <MappingFragment StoreEntitySet="posetilacSet">
+          <ScalarProperty Name="brckar" ColumnName="brckar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="salaSet">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.salaSet">
+        <MappingFragment StoreEntitySet="salaSet">
+          <ScalarProperty Name="dvorana_iddvor" ColumnName="dvorana_iddvor" />
+          <ScalarProperty Name="dvorana_iddvor_sala" ColumnName="dvorana_iddvor_sala" />
+          <ScalarProperty Name="velsce" ColumnName="velsce" />
+          <ScalarProperty Name="brsed" ColumnName="brsed" />
+          <ScalarProperty Name="idsal" ColumnName="idsal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sef_dirigentSet">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.sef_dirigentSet">
+        <MappingFragment StoreEntitySet="sef_dirigentSet">
+          <ScalarProperty Name="prezdir" ColumnName="prezdir" />
+          <ScalarProperty Name="imed" ColumnName="imed" />
+          <ScalarProperty Name="iddir" ColumnName="iddir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="studentSet">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.studentSet">
+        <MappingFragment StoreEntitySet="studentSet">
+          <ScalarProperty Name="clan_kluba_posetilac_brckar_clan_kluba" ColumnName="clan_kluba_posetilac_brckar_clan_kluba" />
+          <ScalarProperty Name="clan_kluba_sfr" ColumnName="clan_kluba_sfr" />
+          <ScalarProperty Name="brckar" ColumnName="brckar" />
+          <ScalarProperty Name="sfr" ColumnName="sfr" />
+          <ScalarProperty Name="popstud" ColumnName="popstud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="koncertorkestar" TypeName="BeogradskaFilharmonijaModel.koncertorkestar" StoreEntitySet="koncertorkestar">
+      <EndProperty Name="orkestarSet">
+        <ScalarProperty Name="id" ColumnName="orkestarSet_id" />
+      </EndProperty>
+      <EndProperty Name="koncertSet">
+        <ScalarProperty Name="idkon" ColumnName="koncertSet_idkon" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="koncertsef_dirigent" TypeName="BeogradskaFilharmonijaModel.koncertsef_dirigent" StoreEntitySet="koncertsef_dirigent">
+      <EndProperty Name="sef_dirigentSet">
+        <ScalarProperty Name="iddir" ColumnName="sef_dirigentSet_iddir" />
+      </EndProperty>
+      <EndProperty Name="koncertSet">
+        <ScalarProperty Name="idkon" ColumnName="koncertSet_idkon" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

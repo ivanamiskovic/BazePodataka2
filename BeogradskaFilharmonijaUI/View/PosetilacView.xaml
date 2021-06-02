@@ -1,0 +1,25 @@
+﻿<Window x:Class="BeogradskaFilharmonijaUI.View.PosetilacView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeogradskaFilharmonijaUI.View"
+        mc:Ignorable="d"
+        Title="PosetilacView" Height="630" Width="650" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="DarkRed">
+        <TextBlock Text="Posetioci" FontSize="30" Foreground="WhiteSmoke" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Margin="10,33,10,509" />
+
+        <Button Content="Dodaj" BorderBrush="Crimson" BorderThickness="2" FontSize="25" Foreground="WhiteSmoke" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="10,438,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Dodaj}"/>
+        <Button Content="Obrisi" FontSize="25" BorderBrush="Crimson" BorderThickness="2" Foreground="WhiteSmoke" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="442,438,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Obrisi}"/>
+
+        <DataGrid BorderBrush="Crimson" BorderThickness="2" ItemsSource="{Binding Path=Lista, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Izabrani}" AutoGenerateColumns="False" Height="280" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="617" SelectionMode="Single" IsReadOnly="True">
+            <DataGrid.Columns>
+                
+                <DataGridTextColumn Header="Brojac" Width="*" Binding="{Binding brckar}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBlock x:Name="textBlockIspis" Foreground="White" FontSize="20" TextWrapping="Wrap" TextAlignment="Center" Margin="10,507,17,29" />
+
+    </Grid>
+</Window>
