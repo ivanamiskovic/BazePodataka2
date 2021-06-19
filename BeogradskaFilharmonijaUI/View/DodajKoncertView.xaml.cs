@@ -24,7 +24,7 @@ namespace BeogradskaFilharmonijaUI.View
             foreach (var item in sale)
             {
                 CheckBox cb = new CheckBox();
-                cb.Content = "ID: " + item.idsal.ToString() ;
+                cb.Content =  item.idsal.ToString() ;
                 cb.IsChecked = false;
                 listBox.Items.Add(cb);
             }
@@ -32,7 +32,7 @@ namespace BeogradskaFilharmonijaUI.View
             foreach (var item in orkestar)
             {
                 CheckBox cb = new CheckBox();
-                cb.Content = "ID: " + item.id.ToString() + " , " + item.imeork + " " + item.brclan;
+                cb.Content =  item.id.ToString() + " , " + item.imeork + " " + item.brclan;
                 cb.IsChecked = false;
                 listBox1.Items.Add(cb);
             }
@@ -40,7 +40,7 @@ namespace BeogradskaFilharmonijaUI.View
             foreach (var item in sef_dirigent)
             {
                 CheckBox cb = new CheckBox();
-                cb.Content = "ID: " + item.iddir.ToString() + " , " + item.imed + " " + item.prezdir;
+                cb.Content =  item.iddir.ToString() + " , " + item.imed + " " + item.prezdir;
                 cb.IsChecked = false;
                 listBox2.Items.Add(cb);
             }
@@ -145,7 +145,7 @@ namespace BeogradskaFilharmonijaUI.View
 
         private void dodaj_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox.Text == "" || textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
+            if ( textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
             {
                 textBlockUspeh.Text = "Neka polja su prazna, molim vas popunite ih!";
                 textBlockUspeh.Foreground = Brushes.Red;
@@ -153,7 +153,7 @@ namespace BeogradskaFilharmonijaUI.View
                 return;
             }
 
-            int id = Convert.ToInt32(textBox.Text);
+           // int id = Convert.ToInt32(textBox.Text);
             int trajanje = Convert.ToInt32(textBox1.Text);
             string naziv = textBox2.Text;
             string zanr = textBox3.Text;
@@ -162,12 +162,14 @@ namespace BeogradskaFilharmonijaUI.View
             List<int> idOrkestar = PomocnaKlasa.IDListBox(listBox1);
             List<int> idSefdirigient = PomocnaKlasa.IDListBox(listBox2);
 
-            int prolaz = DodavanjeUBazu.DodajKoncert(id, trajanje, naziv, zanr, idSale, idOrkestar, idSefdirigient);
+            int prolaz = DodavanjeUBazu.DodajKoncert(trajanje, naziv, zanr, idSale, idOrkestar, idSefdirigient);
 
             if (prolaz == 0)
             {
                 textBlockUspeh.Text = "Morate izabrati najmanje 1 salu";
                 textBlockUspeh.Foreground = Brushes.White;
+            
+
             }
             else if (prolaz == 1)
             {
@@ -179,20 +181,11 @@ namespace BeogradskaFilharmonijaUI.View
                 textBlockUspeh.Text = "Morate izabrati najmanje 1 sefa dirigenta";
                 textBlockUspeh.Foreground = Brushes.White;
             }
-            else if (prolaz == 3)
-            {
-                textBlockUspeh.Text = "Vec postoji koncert sa id-jem: " + id;
-                textBlockUspeh.Foreground = Brushes.White;
-            }
-            else if (prolaz == 4)
+          
+            else 
             {
                 textBlockUspeh.Text = "Desila greska!";
                 textBlockUspeh.Foreground = Brushes.White;
-            }
-            else
-            {
-                textBlockUspeh.Text = "Uspesno ste dodali koncerta sa id-jem: " + id;
-                textBlockUspeh.Foreground = Brushes.Black;
             }
         }
 

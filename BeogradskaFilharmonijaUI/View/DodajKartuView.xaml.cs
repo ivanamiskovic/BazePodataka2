@@ -88,7 +88,7 @@ namespace BeogradskaFilharmonijaUI.View
         }
 
 
-        //BROJ SJEDISTA
+        //BROJ SEDISTA
         private void TextBox2_TextChanged(object sender, TextChangedEventArgs e)
         {
             var textBox = sender as TextBox;
@@ -217,15 +217,15 @@ namespace BeogradskaFilharmonijaUI.View
 
         private void Dodaj_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox.Text == "" || textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || comboBox1.Text == "")
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || comboBox1.Text == "")
             {
                 textBlockUspeh.Text = "Neka polja su prazna, popunite ih!";
                 textBlockUspeh.Foreground = Brushes.Red;
-
+                this.Close();
                 return;
             }
 
-            int id = Convert.ToInt32(textBox.Text);
+           // int id = Convert.ToInt32(textBox.Text);
             int red = Convert.ToInt32(textBox1.Text);
             int brojSedista = Convert.ToInt32(textBox2.Text);
             string danIzvodjenja = textBox3.Text;
@@ -237,8 +237,8 @@ namespace BeogradskaFilharmonijaUI.View
             int idSale = Int32.Parse(reci[1]);
             int idKoncerta = Int32.Parse(reci[4]);
 
-            bool prolaz = DodavanjeUBazu.DodajKartu(id, red, brojSedista, danIzvodjenja, satIzvodjenja, cena, idSale, idKoncerta);
-            if (prolaz == false)
+            bool prolaz = DodavanjeUBazu.DodajKartu(red, brojSedista, danIzvodjenja, satIzvodjenja, cena, idSale, idKoncerta);
+          /*  if (prolaz == false)
             {
                 textBlockUspeh.Text = "Vec postoji karta sa id-jem: " + id;
                 textBlockUspeh.Foreground = Brushes.White;
@@ -248,6 +248,7 @@ namespace BeogradskaFilharmonijaUI.View
                 textBlockUspeh.Text = "Uspesno ste dodali kartu sa id-jem: " + id;
                 textBlockUspeh.Foreground = Brushes.Black;
             }
+          */
         }
 
         private void Vrati_se_Click(object sender, RoutedEventArgs e)

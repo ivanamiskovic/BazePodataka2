@@ -9,23 +9,16 @@ namespace BeogradskaFilharmonija.dao
 
     public class DodavanjeUBazu
     {
-        public static bool DodajDvoranu(int id, string mesto, string naziv, string ulica, int broj)
+        public static bool DodajDvoranu(string mesto, string naziv, string ulica, int broj)
         {
             dvoranaSet dvorana;
             using (var db = new BeogradskaFilharmonijaModelContainer())
             {
                 try
                 {
-                    dvorana = db.dvoranaSet.Where(c => c.iddvor.Equals(id)).FirstOrDefault();
-
-                    if (dvorana != null)
-                    {
-                        return false;
-                    }
-                    else
-                    {
+                    
                         dvorana = new dvoranaSet();
-                        dvorana.iddvor = id;
+                     
                         dvorana.mest = mesto;
                         dvorana.nazdv = naziv;
                         dvorana.ul = ulica;
@@ -36,7 +29,7 @@ namespace BeogradskaFilharmonija.dao
 
                         return true;
 
-                    }
+                    
 
                 }
                 catch(Exception e)
@@ -100,7 +93,7 @@ namespace BeogradskaFilharmonija.dao
 
         }
 
-        public static bool DodajSalu(int id, int sediste, string scena, int idDvorane)
+        public static bool DodajSalu(int sediste, string scena, int idDvorane)
         {
             salaSet sala;
             dvoranaSet dvorana;
@@ -109,31 +102,21 @@ namespace BeogradskaFilharmonija.dao
             {
                 try
                 {
-                    sala = db.salaSet.Where(c => c.idsal.Equals(id)).FirstOrDefault();
                     dvorana = db.dvoranaSet.Where(c => c.iddvor.Equals(idDvorane)).FirstOrDefault();
 
-                    if (sala != null)
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        sala = new salaSet();
-                        sala.idsal = id;
-                        sala.brsed = sediste;
-                        sala.velsce = scena;
+                    sala = new salaSet();
+                        
+                    sala.brsed = sediste;
+                    sala.velsce = scena;
 
-                        sala.dvorana_iddvor_sala = idDvorane;
-                        sala.dvoranaSet = dvorana;
+                    sala.dvorana_iddvor_sala = idDvorane;
+                    sala.dvoranaSet = dvorana;
 
-                        db.salaSet.Add(sala);
-                        db.SaveChanges();
+                    db.salaSet.Add(sala);
+                    db.SaveChanges();
 
-                        return true;
+                    return true;
 
-
-
-                    }
                 }
                 catch(Exception e)
                 {
@@ -144,7 +127,7 @@ namespace BeogradskaFilharmonija.dao
             }
         }
 
-        public static bool DodajKartu(int id, int red, int brojSedista, string danIzvodjenja, string satIzvodjenja, float cena, int idSale, int idKoncerta)
+        public static bool DodajKartu(int red, int brojSedista, string danIzvodjenja, string satIzvodjenja, float cena, int idSale, int idKoncerta)
         {
             kartaSet karta;
             izvodjenjeSet izvodjenje;
@@ -153,34 +136,25 @@ namespace BeogradskaFilharmonija.dao
             {
                 try
                 {
-                    karta = db.kartaSet.Where(c => c.br.Equals(id)).FirstOrDefault();
                     izvodjenje = db.izvodjenjeSet.Where(c => c.sala_idsal_izvodjenje.Equals(idSale)).FirstOrDefault();
+                    
+                    karta = new kartaSet();
+                    // karta.br = id;
+                    karta.red = red;
+                    karta.sed = brojSedista;
+                    karta.daniz = danIzvodjenja;
+                    karta.satiz = satIzvodjenja;
+                    karta.cen = cena;
 
-                    if (karta != null)
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        karta = new kartaSet();
-                        karta.br = id;
-                        karta.red = red;
-                        karta.sed = brojSedista;
-                        karta.daniz = danIzvodjenja;
-                        karta.satiz = satIzvodjenja;
-                        karta.cen = cena;
+                    karta.izvodjenje_sala_idsal_izvodjenje = idSale;
+                    karta.izvodjenje_koncert_idkon_izvodjenje = idKoncerta;
+                    karta.izvodjenjeSet = izvodjenje;
 
-                        karta.izvodjenje_sala_idsal_karta = idSale;
-                        karta.izvodjenje_koncert_idkon_karta = idKoncerta;
-                        karta.izvodjenjeSet = izvodjenje;
+                    db.kartaSet.Add(karta);
+                    db.SaveChanges();
+               
+                    return true;
 
-                        db.kartaSet.Add(karta);
-                        db.SaveChanges();
-
-                        return true;
-
-
-                    }
                 }
                 catch(Exception e)
                 {
@@ -226,7 +200,7 @@ namespace BeogradskaFilharmonija.dao
                         return 2;
                     }
                 }
-                catch
+                catch (Exception e)
                 {
                     return 3;
                 }
@@ -234,7 +208,7 @@ namespace BeogradskaFilharmonija.dao
 
         }
 
-        public static int DodajKoncert(int id, int trajanje, string naziv, string zanr, List<int> idSale, List<int> idOrkestra, List<int> idSef_dirigent)
+        public static int DodajKoncert(int trajanje, string naziv, string zanr, List<int> idSale, List<int> idOrkestra, List<int> idSef_dirigent)
         {
             if (idSale.Count == 0)
             {
@@ -255,56 +229,48 @@ namespace BeogradskaFilharmonija.dao
             {
                 try
                 {
-                    koncert = db.koncertSet.Where(c => c.idkon.Equals(id)).FirstOrDefault();
+                    
+                    koncert = new koncertSet();
+                    
+                    koncert.traj = trajanje;
+                    koncert.nazkon = naziv;
+                    koncert.znrmuzik = zanr;
 
-                    if (koncert != null)
+                    foreach (var item in idSale)
                     {
-                        return 3;
-                    }
-                    else
-                    {
-                        koncert = new koncertSet();
-                        koncert.idkon = id;
-                        koncert.traj = trajanje;
-                        koncert.nazkon = naziv;
-                        koncert.znrmuzik = zanr;
+                        salaSet sala = new salaSet();
+                        sala = db.salaSet.Where(c => c.idsal.Equals(item)).FirstOrDefault();
 
-                        foreach (var item in idSale)
-                        {
-                            salaSet sala = new salaSet();
-                            sala = db.salaSet.Where(c => c.idsal.Equals(item)).FirstOrDefault();
+                        izvodjenjeSet izvodjenje = new izvodjenjeSet();
+                        izvodjenje.sala_idsal_izvodjenje = item;
+                        izvodjenje.salaSet = sala;
+                        izvodjenje.sala_dvorana_iddvor_izvodjenje = sala.dvorana_iddvor_sala;
+                        
+                        izvodjenje.koncertSet = koncert;
 
-                            izvodjenjeSet izvodjenje = new izvodjenjeSet();
-                            izvodjenje.sala_idsal_izvodjenje = item;
-                            izvodjenje.salaSet = sala;
-                            izvodjenje.sala_dvorana_iddvor_izvodjenje = sala.dvorana_iddvor_sala;
-                            izvodjenje.koncert_idkon_izvodjenje = id;
-                            izvodjenje.koncertSet = koncert;
+                        db.izvodjenjeSet.Add(izvodjenje);
+                        db.izvodjenjeSet.Add(izvodjenje);
 
-                            db.izvodjenjeSet.Add(izvodjenje);
-                            db.izvodjenjeSet.Add(izvodjenje);
-
-                            db.izvodjenjeSet.Add(izvodjenje);
-                            db.SaveChanges();
-                        }
-
-                        foreach (var item in idOrkestra)
-                        {
-                            orkestarSet glumac = new orkestarSet();
-                            glumac = db.orkestarSet.Where(c => c.id.Equals(item)).FirstOrDefault();
-                            db.orkestarSet.Add(glumac);
-
-                        }
-                        foreach (var item in idSef_dirigent)
-                        {
-                            sef_dirigentSet sef_Dirigent = new sef_dirigentSet();
-                            sef_Dirigent = db.sef_dirigentSet.Where(c => c.iddir.Equals(item)).FirstOrDefault();
-                            db.sef_dirigentSet.Add(sef_Dirigent);
-                        }
-
-                        return 5;
+                        db.izvodjenjeSet.Add(izvodjenje);
+                        db.SaveChanges();
                     }
 
+                    foreach (var item in idOrkestra)
+                    {
+                        orkestarSet glumac = new orkestarSet();
+                        glumac = db.orkestarSet.Where(c => c.id.Equals(item)).FirstOrDefault();
+                        db.orkestarSet.Add(glumac);
+
+                    }
+                    foreach (var item in idSef_dirigent)
+                    {
+                        sef_dirigentSet sef_Dirigent = new sef_dirigentSet();
+                        sef_Dirigent = db.sef_dirigentSet.Where(c => c.iddir.Equals(item)).FirstOrDefault();
+                        db.sef_dirigentSet.Add(sef_Dirigent);
+                    }
+
+                    return 5;
+                
                 }
                 catch
                 {
@@ -313,7 +279,7 @@ namespace BeogradskaFilharmonija.dao
             }
 
         }
-        public static bool DodajOrkestar(int id, string ime,Int32 brclan)
+        public static bool DodajOrkestar( string ime,Int32 brclan)
         {
             orkestarSet orkestar;
 
@@ -321,16 +287,9 @@ namespace BeogradskaFilharmonija.dao
             {
                 try
                 {
-                    orkestar = db.orkestarSet.Where(c => c.id.Equals(id)).FirstOrDefault();
-
-                    if (orkestar != null)
-                    {
-                        return false;
-                    }
-                    else
-                    {
+                   
                         orkestar = new orkestarSet();
-                        orkestar.id = id;
+                      //  orkestar.id = id;
                         orkestar.imeork = ime;
                         orkestar.brclan = brclan;
 
@@ -338,7 +297,7 @@ namespace BeogradskaFilharmonija.dao
                         db.SaveChanges();
 
                         return true;
-                    }
+                    
                 }
                 catch
                 {
@@ -348,7 +307,7 @@ namespace BeogradskaFilharmonija.dao
 
         }
 
-        public static bool DodajSefa_dirigenta(int id, string ime, string prezime)
+        public static bool DodajSefa_dirigenta(string ime, string prezime)
         {
             sef_dirigentSet sef_dirigent;
 
@@ -356,24 +315,16 @@ namespace BeogradskaFilharmonija.dao
             {
                 try
                 {
-                    sef_dirigent = db.sef_dirigentSet.Where(c => c.iddir.Equals(id)).FirstOrDefault();
+                    sef_dirigent = new sef_dirigentSet();
+                    
+                    sef_dirigent.imed = ime;
+                    sef_dirigent.prezdir = prezime;
 
-                    if (sef_dirigent != null)
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        sef_dirigent = new sef_dirigentSet();
-                        sef_dirigent.iddir = id;
-                        sef_dirigent.imed = ime;
-                        sef_dirigent.prezdir = prezime;
+                    db.sef_dirigentSet.Add(sef_dirigent);
+                    db.SaveChanges();
 
-                        db.sef_dirigentSet.Add(sef_dirigent);
-                        db.SaveChanges();
-
-                        return true;
-                    }
+                    return true;
+                    
                 }
                 catch
                 {

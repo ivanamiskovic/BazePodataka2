@@ -18,6 +18,7 @@ namespace BeogradskaFilharmonijaUI.View
         }
 
         //ID
+        
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             var textBox = sender as TextBox;
@@ -46,7 +47,7 @@ namespace BeogradskaFilharmonijaUI.View
             if (textBlock.Text == "" && textBlock1.Text == "" && textBlock2.Text == "" && textBlock3.Text == "" && textBlock4.Text == "")
                 dodaj.Visibility = Visibility.Visible;
         }
-
+       
         //MESTO
         private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -136,7 +137,7 @@ namespace BeogradskaFilharmonijaUI.View
 
         private void dodaj_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox.Text == "" || textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
+            if ( textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
             {
                 textBlockUspeh.Text = "Neka polja su prazna, popunite ih!";
                 textBlockUspeh.Foreground = Brushes.Red;
@@ -144,14 +145,14 @@ namespace BeogradskaFilharmonijaUI.View
                 return;
             }
 
-            int id = Convert.ToInt32(textBox.Text);
+            //int id = Convert.ToInt32(textBox.Text);
             string mesto = textBox1.Text;
             string naziv = textBox2.Text;
             string ulica = textBox3.Text;
             int broj = Convert.ToInt32(textBox4.Text);
-            bool prolaz = DodavanjeUBazu.DodajDvoranu(id, mesto, naziv, ulica, broj);
-
-            if (prolaz == false)
+            bool prolaz = DodavanjeUBazu.DodajDvoranu(mesto, naziv, ulica, broj);
+            this.Close();
+          /*  if (prolaz == false)
             {
                 textBlockUspeh.Text = "Vec postoji dvorana sa id-jem: " + id;
                 textBlockUspeh.Foreground = Brushes.White;
@@ -161,6 +162,7 @@ namespace BeogradskaFilharmonijaUI.View
                 textBlockUspeh.Text = "Uspesno ste dodali dvoranu sa id-jem: " + id;
                 textBlockUspeh.Foreground = Brushes.Black;
             }
+          */
         }
 
         private void vrati_se_Click(object sender, RoutedEventArgs e)

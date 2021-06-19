@@ -22,7 +22,7 @@ namespace BeogradskaFilharmonijaUI.View
             foreach (var item in karte)
             {
                 CheckBox cb = new CheckBox();
-                cb.Content = "ID: " + item.br.ToString() + " , cena: " + item.cen.ToString() + " , red: " + item.red.ToString() + " , broj sedista: " + item.sed.ToString();
+                cb.Content = "br: "+ item.br.ToString() + " cena: " + item.cen.ToString() + " , red: " + item.red.ToString() + " , broj sedista: " + item.sed.ToString();
                 cb.IsChecked = false;
                 listBox.Items.Add(cb);
             }
@@ -60,18 +60,18 @@ namespace BeogradskaFilharmonijaUI.View
 
         private void dodaj_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox.Text == "")
-            {
-                textBlockUspeh.Text = "Neka polja su prazna, popunite ih!";
-                textBlockUspeh.Foreground = Brushes.White;
+            /*  if (textBox.Text == "")
+              {
+                  textBlockUspeh.Text = "Neka polja su prazna, popunite ih!";
+                  textBlockUspeh.Foreground = Brushes.White;
 
-                return;
-            }
-
-            int brojac = Convert.ToInt32(textBox.Text);
+                  return;
+              }
+             */
+            //  int brojac = Convert.ToInt32(textBox.Text);
 
             // List<int> idKarte = PomocnaKlasa.IDListBox(listBox);
-
+            int brojac = 0;
             List<int> idKarte = PomocnaKlasa.IDListBox(listBox);
             int prolaz = DodavanjeUBazu.DodajPosetioca(brojac, idKarte);
 
@@ -102,7 +102,7 @@ namespace BeogradskaFilharmonijaUI.View
             foreach (var item in karte)
             {
                 CheckBox cb = new CheckBox();
-                cb.Content = "ID: " + item.br.ToString() + " , cena: " + item.cen.ToString() + " , red: " + item.red.ToString() + " , broj sedista: " + item.sed.ToString();
+                cb.Content = "br: "+ item.br.ToString() +" , cena: " + item.cen.ToString() + " , red: " + item.red.ToString() + " , broj sedista: " + item.sed.ToString();
                 cb.IsChecked = false;
                 listBox.Items.Add(cb);
             }

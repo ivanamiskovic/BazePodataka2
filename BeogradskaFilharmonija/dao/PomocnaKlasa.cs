@@ -22,7 +22,7 @@ namespace BeogradskaFilharmonija.dao
                 {
                     string natpis = cb.Content.ToString();
                     string[] reci = natpis.Split(' ');
-                    int id = Convert.ToInt32(reci[1]);
+                    int id = Convert.ToInt32(reci[0]);
 
                     povratna.Add(id);
                 }

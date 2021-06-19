@@ -4,19 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8bad6c795ef340998b0adddaff589a98" Name="Diagram1" >
-        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.clan_klubaSet" Width="1.5" PointX="3" PointY="10.875" />
-        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.djakSet" Width="1.5" PointX="5.25" PointY="14.25" />
-        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.dvoranaSet" Width="1.5" PointX="1.5" PointY="19" />
-        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.izvodjenjeSet" Width="1.5" PointX="0.75" PointY="1.5" />
-        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.kartaSet" Width="1.5" PointX="3" PointY="5.875" />
-        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.koncertSet" Width="1.5" PointX="1.5" PointY="22" />
-        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.orkestarSet" Width="1.5" PointX="3.75" PointY="23.625" />
-        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.penzionerSet" Width="1.5" PointX="5.25" PointY="8.5" />
-        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.posetilacSet" Width="1.5" PointX="0.75" PointY="7" />
-        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.salaSet" Width="1.5" PointX="1.5" PointY="14.875" />
-        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.sef_dirigentSet" Width="1.5" PointX="3.75" PointY="21" />
-        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.studentSet" Width="1.5" PointX="5.25" PointY="11.375" />
+      <Diagram DiagramId="8bad6c795ef340998b0adddaff589a98" Name="Diagram1" ZoomLevel="73" >
+        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.clan_klubaSet" Width="1.5" PointX="6.125" PointY="12.5" />
+        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.djakSet" Width="1.5" PointX="9.375" PointY="14.75" />
+        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.dvoranaSet" Width="1.5" PointX="1.875" PointY="14" />
+        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.izvodjenjeSet" Width="1.5" PointX="0.5" PointY="5.5" />
+        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.kartaSet" Width="1.5" PointX="4" PointY="4.625" />
+        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.koncertSet" Width="1.5" PointX="0.5" PointY="17.625" />
+        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.orkestarSet" Width="1.5" PointX="3.75" PointY="19.125" />
+        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.penzionerSet" Width="1.5" PointX="9.5" PointY="10.875" />
+        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.posetilacSet" Width="1.5" PointX="5.375" PointY="9.625" />
+        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.salaSet" Width="1.5" PointX="1.625" PointY="10.25" />
+        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.sef_dirigentSet" Width="1.5" PointX="3.875" PointY="16.75" />
+        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.studentSet" Width="1.5" PointX="12.125" PointY="12.125" />
         <AssociationConnector Association="BeogradskaFilharmonijaModel.FK_clan_klubadjak" />
         <AssociationConnector Association="BeogradskaFilharmonijaModel.FK_clan_klubapenzioner" />
         <AssociationConnector Association="BeogradskaFilharmonijaModel.FK_clan_klubastudent" />

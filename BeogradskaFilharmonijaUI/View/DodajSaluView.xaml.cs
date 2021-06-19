@@ -116,7 +116,7 @@ namespace BeogradskaFilharmonijaUI.View
         //dodaj
         private void dodaj_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox.Text == "" || textBox1.Text == "" || textBox2.Text == "" || comboBox1.Text == "" || comboBox1.Text == "")
+            if (textBox1.Text == "" || textBox2.Text == "" || comboBox1.Text == "" || comboBox1.Text == "")
             {
                 textBlockUspeh.Text = "Neka polja su prazna, molim vas popunite ih!";
                 textBlockUspeh.Foreground = Brushes.White;
@@ -124,7 +124,7 @@ namespace BeogradskaFilharmonijaUI.View
                 return;
             }
 
-            int id = Convert.ToInt32(textBox.Text);
+           // int id = Convert.ToInt32(textBox.Text);
             int sedista = Convert.ToInt32(textBox1.Text);
             string scena = textBox2.Text;
             string dvorana = comboBox1.Text;
@@ -132,18 +132,9 @@ namespace BeogradskaFilharmonijaUI.View
             string[] reci = dvorana.Split(' ');
             int idDvorane = Convert.ToInt32(reci[1]);
 
-            bool prolaz = DodavanjeUBazu.DodajSalu(id, sedista, scena, idDvorane);
-
-            if (prolaz == false)
-            {
-                textBlockUspeh.Text = "Vec postoji sala sa id-jem: " + id;
-                textBlockUspeh.Foreground = Brushes.White;
-            }
-            else
-            {
-                textBlockUspeh.Text = "Uspesno ste dodali salu sa id-jem: " + id;
-                textBlockUspeh.Foreground = Brushes.Black;
-            }
+            bool prolaz = DodavanjeUBazu.DodajSalu(sedista, scena, idDvorane);
+           
+            
         }
         //vrati se
         private void vrati_se_Click(object sender, RoutedEventArgs e)

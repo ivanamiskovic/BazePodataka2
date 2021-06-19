@@ -89,7 +89,7 @@ namespace BeogradskaFilharmonijaUI.View
 
         private void dodaj_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox.Text == "" || textBox1.Text == "" || textBox2.Text == "")
+            if (textBox1.Text == "" || textBox2.Text == "")
             {
                 textBlockUspeh.Text = "Neka polja su prazna, popunite ih!";
                 textBlockUspeh.Foreground = Brushes.White;
@@ -97,22 +97,24 @@ namespace BeogradskaFilharmonijaUI.View
                 return;
             }
 
-            int id = Convert.ToInt32(textBox.Text);
+           // int id = Convert.ToInt32(textBox.Text);
             string ime = textBox1.Text;
             int brclan = Convert.ToInt32(textBox2.Text);
 
-            bool prolaz = DodavanjeUBazu.DodajOrkestar(id, ime, brclan);
+            bool prolaz = DodavanjeUBazu.DodajOrkestar(ime, brclan);
 
             if (prolaz == false)
             {
-                textBlockUspeh.Text = "Vec postoji orkestar sa id-jem: " + id;
+               // textBlockUspeh.Text = "Vec postoji orkestar sa id-jem: " + id;
                 textBlockUspeh.Foreground = Brushes.White;
+                
             }
             else
             {
-                textBlockUspeh.Text = "Uspesno ste dodali orkestar sa id-jem: " + id;
+               // textBlockUspeh.Text = "Uspesno ste dodali orkestar sa id-jem: " + id;
                 textBlockUspeh.Foreground = Brushes.Black;
             }
+           
         }
 
         private void vrati_se_Click(object sender, RoutedEventArgs e)
