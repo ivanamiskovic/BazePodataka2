@@ -180,3 +180,4 @@ C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\
 C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\obj\Debug\BeogradskaFilharmonijaUI.exe
 C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\obj\Debug\BeogradskaFilharmonijaUI.pdb
 C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\obj\Debug\BeogradskaFilharmonijaUI.csprojAssemblyReference.cache
+C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\obj\Debug\BeogradskaFilharmonijaUI_Content.g.cs
