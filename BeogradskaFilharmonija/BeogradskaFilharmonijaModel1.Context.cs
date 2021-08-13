@@ -37,5 +37,8 @@ namespace BeogradskaFilharmonija
         public virtual DbSet<salaSet> salaSet { get; set; }
         public virtual DbSet<sef_dirigentSet> sef_dirigentSet { get; set; }
         public virtual DbSet<studentSet> studentSet { get; set; }
+        public virtual DbSet<Korisnik> Korisnik { get; set; }
+        public virtual DbSet<Statistic> Statistic { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

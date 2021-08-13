@@ -106,6 +106,9 @@
     <Compile Include="koncertSet.cs">
       <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Korisnik.cs">
+      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+    </Compile>
     <Compile Include="orkestarSet.cs">
       <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
     </Compile>
@@ -122,7 +125,13 @@
     <Compile Include="sef_dirigentSet.cs">
       <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Statistic.cs">
+      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+    </Compile>
     <Compile Include="studentSet.cs">
+      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
       <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
     </Compile>
   </ItemGroup>

@@ -57,6 +57,9 @@
       <End Role="koncertSet" EntitySet="koncertSet" />
       <End Role="sef_dirigentSet" EntitySet="sef_dirigentSet" />
     </AssociationSet>
+    <EntitySet Name="Korisnik" EntityType="BeogradskaFilharmonijaModel.Korisnik" />
+    <EntitySet Name="Statistic" EntityType="BeogradskaFilharmonijaModel.Statistic" />
+    <EntitySet Name="sysdiagrams" EntityType="BeogradskaFilharmonijaModel.sysdiagrams" />
   </EntityContainer>
   <EntityType Name="clan_klubaSet">
     <Key>
@@ -342,4 +345,30 @@
     <End Type="BeogradskaFilharmonijaModel.koncertSet" Role="koncertSet" Multiplicity="*" />
     <End Type="BeogradskaFilharmonijaModel.sef_dirigentSet" Role="sef_dirigentSet" Multiplicity="*" />
   </Association>
+  <EntityType Name="Korisnik">
+    <Key>
+      <PropertyRef Name="KorisnickoIme" />
+    </Key>
+    <Property Name="KorisnickoIme" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Sifra" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Uloga" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Statistic">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="StatisticDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
 </Schema>

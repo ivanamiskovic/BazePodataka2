@@ -150,5 +150,34 @@
         <ScalarProperty Name="idkon" ColumnName="koncertSet_idkon" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="Korisnik">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.Korisnik">
+        <MappingFragment StoreEntitySet="Korisnik">
+          <ScalarProperty Name="Uloga" ColumnName="Uloga" />
+          <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+          <ScalarProperty Name="KorisnickoIme" ColumnName="KorisnickoIme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Statistic">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.Statistic">
+        <MappingFragment StoreEntitySet="Statistic">
+          <ScalarProperty Name="StatisticDate" ColumnName="StatisticDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

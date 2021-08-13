@@ -28,6 +28,7 @@
         <AssociationConnector Association="BeogradskaFilharmonijaModel.FK_posetilackarta" />
         <AssociationConnector Association="BeogradskaFilharmonijaModel.koncertorkestar" />
         <AssociationConnector Association="BeogradskaFilharmonijaModel.koncertsef_dirigent" />
+        <EntityTypeShape EntityType="BeogradskaFilharmonijaModel.Korisnik" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

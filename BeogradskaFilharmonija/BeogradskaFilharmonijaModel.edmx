@@ -98,6 +98,14 @@
           <Property Name="znrmuzik" Type="nvarchar(max)" Nullable="false" />
           <Property Name="traj" Type="decimal" Precision="18" Scale="0" Nullable="false" />
         </EntityType>
+        <EntityType Name="Korisnik">
+          <Key>
+            <PropertyRef Name="KorisnickoIme" />
+          </Key>
+          <Property Name="KorisnickoIme" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Sifra" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Uloga" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
         <EntityType Name="orkestarSet">
           <Key>
             <PropertyRef Name="id" />
@@ -143,6 +151,14 @@
           <Property Name="imed" Type="nvarchar(max)" Nullable="false" />
           <Property Name="prezdir" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
+        <EntityType Name="Statistic">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Price" Type="float" />
+          <Property Name="StatisticDate" Type="datetime" />
+        </EntityType>
         <EntityType Name="studentSet">
           <Key>
             <PropertyRef Name="popstud" />
@@ -154,6 +170,16 @@
           <Property Name="brckar" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="clan_kluba_sfr" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="clan_kluba_posetilac_brckar_clan_kluba" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_clan_klubadjak">
           <End Role="clan_klubaSet" Type="Self.clan_klubaSet" Multiplicity="1" />
@@ -332,12 +358,15 @@
           <EntitySet Name="koncertorkestar" EntityType="Self.koncertorkestar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="koncertsef_dirigent" EntityType="Self.koncertsef_dirigent" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="koncertSet" EntityType="Self.koncertSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Korisnik" EntityType="Self.Korisnik" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="orkestarSet" EntityType="Self.orkestarSet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="penzionerSet" EntityType="Self.penzionerSet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="posetilacSet" EntityType="Self.posetilacSet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="salaSet" EntityType="Self.salaSet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sef_dirigentSet" EntityType="Self.sef_dirigentSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Statistic" EntityType="Self.Statistic" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="studentSet" EntityType="Self.studentSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_clan_klubadjak" Association="Self.FK_clan_klubadjak">
             <End Role="clan_klubaSet" EntitySet="clan_klubaSet" />
             <End Role="djakSet" EntitySet="djakSet" />
@@ -452,6 +481,9 @@
             <End Role="koncertSet" EntitySet="koncertSet" />
             <End Role="sef_dirigentSet" EntitySet="sef_dirigentSet" />
           </AssociationSet>
+          <EntitySet Name="Korisnik" EntityType="BeogradskaFilharmonijaModel.Korisnik" />
+          <EntitySet Name="Statistic" EntityType="BeogradskaFilharmonijaModel.Statistic" />
+          <EntitySet Name="sysdiagrams" EntityType="BeogradskaFilharmonijaModel.sysdiagrams" />
         </EntityContainer>
         <EntityType Name="clan_klubaSet">
           <Key>
@@ -737,6 +769,32 @@
           <End Type="BeogradskaFilharmonijaModel.koncertSet" Role="koncertSet" Multiplicity="*" />
           <End Type="BeogradskaFilharmonijaModel.sef_dirigentSet" Role="sef_dirigentSet" Multiplicity="*" />
         </Association>
+        <EntityType Name="Korisnik">
+          <Key>
+            <PropertyRef Name="KorisnickoIme" />
+          </Key>
+          <Property Name="KorisnickoIme" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Sifra" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Uloga" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Statistic">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Price" Type="Double" />
+          <Property Name="StatisticDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -892,6 +950,35 @@
               <ScalarProperty Name="idkon" ColumnName="koncertSet_idkon" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="Korisnik">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.Korisnik">
+              <MappingFragment StoreEntitySet="Korisnik">
+                <ScalarProperty Name="Uloga" ColumnName="Uloga" />
+                <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+                <ScalarProperty Name="KorisnickoIme" ColumnName="KorisnickoIme" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Statistic">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.Statistic">
+              <MappingFragment StoreEntitySet="Statistic">
+                <ScalarProperty Name="StatisticDate" ColumnName="StatisticDate" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="BeogradskaFilharmonijaModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>
