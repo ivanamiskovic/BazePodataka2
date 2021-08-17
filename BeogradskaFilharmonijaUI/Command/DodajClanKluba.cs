@@ -30,6 +30,9 @@ namespace BeogradskaFilharmonijaUI.Command
         public void Execute(object parameter)
         {
             DodajClanKlubaView view = new DodajClanKlubaView();
+
+            view.textBox4.Text = GlobalnaKorisnickaKlasa.korisnik.KorisnickoIme;
+
             viewClose.Close();
             view.ShowDialog();
         }

@@ -227,6 +227,26 @@ namespace BeogradskaFilharmonija.dao
             return lista;
         }
 
+        public static List<Korisnik> VratiKorisnike()
+        {
+            List<Korisnik> lista = new List<Korisnik>();
 
+            using (var db = new BeogradskaFilharmonijaModelContainer())
+            {
+                try
+                {
+                    foreach (var item in db.Korisnik)
+                    {
+                        lista.Add(item);
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+
+            return lista;
+        }
     }
 }

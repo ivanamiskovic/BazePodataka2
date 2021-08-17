@@ -148,6 +148,13 @@
     <Compile Include="Command\ObrisiDvoranu.cs" />
     <Compile Include="Command\ObrisiSalu.cs" />
     <Compile Include="Command\ObrisiSefa_dirigenta.cs" />
+    <Compile Include="GlobalnaKorisnickaKlasa.cs" />
+    <Compile Include="LogInWindow.xaml.cs">
+      <DependentUpon>LogInWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterWindow.xaml.cs">
+      <DependentUpon>RegisterWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\ClanKlubaModel.cs" />
     <Compile Include="ViewModel\DvoranaModel.cs" />
     <Compile Include="ViewModel\KartaModel.cs" />
@@ -228,6 +235,14 @@
     <Compile Include="View\Sef_dirigentView.xaml.cs">
       <DependentUpon>Sef_dirigentView.xaml</DependentUpon>
     </Compile>
+    <Page Include="LogInWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegisterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\DvoranaView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

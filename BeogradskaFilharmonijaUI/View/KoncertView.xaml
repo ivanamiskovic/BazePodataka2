@@ -9,9 +9,9 @@
     <Grid Background="DarkRed">
         <TextBlock Text="Koncerti" Foreground="WhiteSmoke" FontSize="30" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Margin="10,30,10,523" />
 
-        <Button Content="Dodaj" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" HorizontalAlignment="Left" Margin="10,438,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Dodaj}"/>
-        <Button Content="Obrisi" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" HorizontalAlignment="Left" Margin="442,438,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Obrisi}"/>
-        <Button Content="Izmeni" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" HorizontalAlignment="Left" Margin="229,438,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Izmeni}"/>
+		<Button Content="Dodaj" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" HorizontalAlignment="Left" Margin="10,438,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Dodaj}" IsEnabled="{Binding Dostupnost}"/>
+		<Button Content="Obrisi" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" HorizontalAlignment="Left" Margin="442,438,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Obrisi}" IsEnabled="{Binding Dostupnost}"/>
+		<Button Content="Izmeni" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" HorizontalAlignment="Left" Margin="229,438,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Izmeni}" IsEnabled="{Binding Dostupnost}"/>
 
         <DataGrid BorderBrush="Crimson" BorderThickness="2" ItemsSource="{Binding Path=Lista, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Izabrani}" AutoGenerateColumns="False" Height="280" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="617" SelectionMode="Single" IsReadOnly="True">
             <DataGrid.Columns>

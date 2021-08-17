@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\obj\Debug\
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonijaUI\obj\Debug\
 BeogradskaFilharmonijaUI
 none
 false
 DEBUG;TRACE
-C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\App.xaml
-25-903233334
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonijaUI\App.xaml
+27-1454143135
 6-502881758
-60-1680124025
-1322087032038
-View\DvoranaView.xaml;View\KartaView.xaml;View\IzmeniDvoranaView.xaml;View\DodajDvoranaView.xaml;MainWindow.xaml;View\ClanKlubaView.xaml;View\DodajClanKlubaView.xaml;View\DodajKartuView.xaml;View\DodajKoncertView.xaml;View\DodajOrkestarView.xaml;View\DodajPosetiocaView.xaml;View\DodajSaluView.xaml;View\DodajSefa_dirigentaView.xaml;View\IzmeniClanKlubaView.xaml;View\IzmeniKartuView.xaml;View\IzmeniKoncertView.xaml;View\IzmeniOrkestarView.xaml;View\IzmeniSaluView.xaml;View\IzmeniSefa_dirigentaView.xaml;View\KoncertView.xaml;View\OrkestarView.xaml;View\OrkestarZanrView.xaml;View\PosetilacView.xaml;View\SalaView.xaml;View\Sef_dirigentView.xaml;
+63-1296787058
+1321699199339
+LogInWindow.xaml;RegisterWindow.xaml;View\DvoranaView.xaml;View\KartaView.xaml;View\IzmeniDvoranaView.xaml;View\DodajDvoranaView.xaml;MainWindow.xaml;View\ClanKlubaView.xaml;View\DodajClanKlubaView.xaml;View\DodajKartuView.xaml;View\DodajKoncertView.xaml;View\DodajOrkestarView.xaml;View\DodajPosetiocaView.xaml;View\DodajSaluView.xaml;View\DodajSefa_dirigentaView.xaml;View\IzmeniClanKlubaView.xaml;View\IzmeniKartuView.xaml;View\IzmeniKoncertView.xaml;View\IzmeniOrkestarView.xaml;View\IzmeniSaluView.xaml;View\IzmeniSefa_dirigentaView.xaml;View\KoncertView.xaml;View\OrkestarView.xaml;View\OrkestarZanrView.xaml;View\PosetilacView.xaml;View\SalaView.xaml;View\Sef_dirigentView.xaml;
 
 False
 

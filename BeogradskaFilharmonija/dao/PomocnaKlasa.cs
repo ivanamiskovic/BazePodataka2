@@ -119,5 +119,28 @@ namespace BeogradskaFilharmonija.dao
 
             return povratna;
         }
+
+        public static Korisnik ProveriDaliPostojiKorisnik(string korisnickoIme, string sifra)
+		{
+            using (var db = new BeogradskaFilharmonijaModelContainer())
+            {
+                try
+                {
+                    foreach (var item in db.Korisnik)
+                    {
+                        if (item.KorisnickoIme == korisnickoIme && item.Sifra == sifra)
+						{
+                            return item;
+						}
+                    }
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+
+            return null;
+        }
     }
 }

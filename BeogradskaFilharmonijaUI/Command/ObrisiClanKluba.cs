@@ -40,6 +40,14 @@ namespace BeogradskaFilharmonijaUI.Command
             }
             else
             {
+                if (viewModel.Izabrani.korime != GlobalnaKorisnickaKlasa.korisnik.KorisnickoIme)
+				{
+                    view.textBlockIspis.Text = "Ne mozete obrisati druge korisnike!";
+                    view.textBlockIspis.Foreground = Brushes.Red;
+
+                    return;
+                }
+
                 decimal id = viewModel.Izabrani.sfr;
 
                 int ispis = BrisanjeIzBaze.ObrisiClanKluba(id);

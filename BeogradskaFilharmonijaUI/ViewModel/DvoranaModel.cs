@@ -26,6 +26,7 @@ namespace BeogradskaFilharmonijaUI.ViewModel
 
         private List<dvoranaSet> lista;
         private dvoranaSet izabrani;
+        private bool dostupnost;
 
         public DodajDvoranu Dodaj { get; set; }
         public ObrisiDvoranu Obrisi { get; set; }
@@ -62,5 +63,30 @@ namespace BeogradskaFilharmonijaUI.ViewModel
             }
         }
 
+        public bool Dostupnost
+        {
+            get
+            {
+                ProveriKorisnika();
+                return dostupnost;
+            }
+            set
+            {
+                dostupnost = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("Dostupnost"));
+            }
+        }
+
+        private void ProveriKorisnika()
+        {
+            if (GlobalnaKorisnickaKlasa.korisnik.Uloga == "admin")
+            {
+                dostupnost = true;
+            }
+            else
+            {
+                dostupnost = false;
+            }
+        }
     }
 }

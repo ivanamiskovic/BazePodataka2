@@ -24,7 +24,7 @@
         <TextBlock x:Name="textBlock3" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,213,0,0" Width="272" Height="25" />
 
         <Label Content="Korisnicko ime :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,243,0,0" VerticalAlignment="Top" Width="103"/>
-        <TextBox x:Name="textBox4" BorderBrush="Crimson" BorderThickness="2"  HorizontalAlignment="Left" Height="23" Margin="123,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="TextBox4_TextChanged"/>
+        <TextBox x:Name="textBox4" BorderBrush="Crimson" BorderThickness="2"  HorizontalAlignment="Left" Height="23" Margin="123,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="TextBox4_TextChanged" IsReadOnly="True"/>
         <TextBlock x:Name="textBlock4" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,274,0,0" Width="272" Height="25" />
 
         <Label Content="Datum rodjenja :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,304,0,0" VerticalAlignment="Top" Width="111"/>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="BeogradskaFilharmonijaUI.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeogradskaFilharmonijaUI"
+        mc:Ignorable="d"
+        Title="RegisterWindow" Height="450" Width="800">
+	<Grid Background="DarkRed">
+		<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+			<Label HorizontalContentAlignment="Center" Content="Korisnicko ime:" Background="Transparent" Foreground="WhiteSmoke" FontSize="22" FontWeight="Bold"/>
+			<TextBox x:Name="korisnickoImeTextBox" Height="45" TextWrapping="Wrap" FontSize="22" FontWeight="Bold"/>
+			<Label HorizontalContentAlignment="Center" Content="Sifra:" Background="Transparent" Foreground="WhiteSmoke" FontSize="22" FontWeight="Bold"/>
+			<PasswordBox x:Name="sifraBox" Height="45" FontSize="22" FontWeight="Bold"/>
+			<Label HorizontalContentAlignment="Center" Content="Uloga:" Background="Transparent" Foreground="WhiteSmoke" FontSize="22" FontWeight="Bold"/>
+			<ComboBox x:Name="ulogaComboBox" Height="45" FontSize="22" FontWeight="Bold">
+				<ComboBoxItem Name="Admin">Admin</ComboBoxItem>
+				<ComboBoxItem Name="Dispecer">Dispecer</ComboBoxItem>
+				<ComboBoxItem Name="Kupac">Kupac</ComboBoxItem>
+			</ComboBox>
+			<Button Content="Registruj se" Click="RegistrujSe_Click" Background="Transparent" Foreground="WhiteSmoke" FontSize="22" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Margin="0 10"/>
+			<Button Content="Imam vec nalog, uloguj se!" Click="UlogujSe_Click" Background="Transparent" Foreground="WhiteSmoke" FontSize="22" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Margin="0 10"/>
+			<TextBlock x:Name="textBlockUspeh" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" Height="45" Width="400"/>
+		</StackPanel>
+	</Grid>
+</Window>

@@ -40,11 +40,19 @@ namespace BeogradskaFilharmonijaUI.Command
             }
             else
             {
+                if (viewModel.Izabrani.korime != GlobalnaKorisnickaKlasa.korisnik.KorisnickoIme)
+                {
+                    viewClose.textBlockIspis.Text = "Ne mozete izmeniti druge korisnike!";
+                    viewClose.textBlockIspis.Foreground = Brushes.Red;
+
+                    return;
+                }
+
                 view.textBox.Text = viewModel.Izabrani.sfr.ToString();
                 view.textBox1.Text = viewModel.Izabrani.jmbg.ToString();
-                view.textBox2.Text = viewModel.Izabrani.korime.ToString();
+                view.textBox2.Text = viewModel.Izabrani.imeck.ToString();
                 view.textBox3.Text = viewModel.Izabrani.datrodj.ToString();
-                view.textBox4.Text = viewModel.Izabrani.imeck.ToString();
+                view.textBox4.Text = viewModel.Izabrani.korime.ToString();
                 view.textBox5.Text = viewModel.Izabrani.prezck.ToString();
 
                 viewClose.Close();

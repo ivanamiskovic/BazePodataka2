@@ -25,6 +25,7 @@ namespace BeogradskaFilharmonijaUI.ViewModel
 
         private List<clan_klubaSet> lista;
         private clan_klubaSet izabrani;
+        private bool dostupnost;
 
         public DodajClanKluba Dodaj { get; set; }
         public ObrisiClanKluba Obrisi { get; set; }
@@ -37,7 +38,6 @@ namespace BeogradskaFilharmonijaUI.ViewModel
             this.Izmeni = new IzmeniClanKluba(this, viewParam);
 
             Lista = CitanjeIzBaze.VratiClanKluba();
-
         }
 
         public List<clan_klubaSet> Lista
@@ -57,6 +57,32 @@ namespace BeogradskaFilharmonijaUI.ViewModel
             {
                 izabrani = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("Izabrani"));
+            }
+        }
+
+        public bool Dostupnost
+        {
+            get
+            {
+                ProveriKorisnika();
+                return dostupnost;
+            }
+            set
+            {
+                dostupnost = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("Dostupnost"));
+            }
+        }
+
+        private void ProveriKorisnika()
+        {
+            if (GlobalnaKorisnickaKlasa.korisnik.Uloga == "kupac")
+            {
+                dostupnost = true;
+            }
+            else
+            {
+                dostupnost = false;
             }
         }
     }

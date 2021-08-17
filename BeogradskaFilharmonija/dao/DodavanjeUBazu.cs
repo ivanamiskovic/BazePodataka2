@@ -332,5 +332,32 @@ namespace BeogradskaFilharmonija.dao
                 }
             }
         }
+
+        public static bool DodajKorisnika(string korisnickoIme, string sifra, string uloga)
+        {
+            Korisnik korisnik;
+
+            using (var db = new BeogradskaFilharmonijaModelContainer())
+            {
+                try
+                {
+                    korisnik = new Korisnik();
+
+                    korisnik.KorisnickoIme = korisnickoIme;
+                    korisnik.Sifra = sifra;
+                    korisnik.Uloga = uloga;
+
+                    db.Korisnik.Add(korisnik);
+                    db.SaveChanges();
+
+                    return true;
+
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

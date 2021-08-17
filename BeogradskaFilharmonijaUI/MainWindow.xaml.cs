@@ -76,5 +76,14 @@ namespace BeogradskaFilharmonijaUI
             ClanKlubaView view = new ClanKlubaView();
             view.ShowDialog();
         }
-    }
+
+		private void buttonOdjaviSe_Click(object sender, RoutedEventArgs e)
+		{
+            GlobalnaKorisnickaKlasa.korisnik = null;
+
+            LogInWindow view = new LogInWindow();
+            Close();
+            view.ShowDialog();
+        }
+	}
 }

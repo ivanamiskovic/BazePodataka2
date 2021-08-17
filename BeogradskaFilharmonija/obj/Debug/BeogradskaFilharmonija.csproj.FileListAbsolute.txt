@@ -30,3 +30,19 @@ C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonija\bi
 C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonija\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonija\obj\Debug\BeogradskaFilharmonija.csproj.CopyComplete
 C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonija\obj\Debug\BeogradskaFilharmonija.csprojAssemblyReference.cache
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\bin\Debug\BeogradskaFilharmonija.dll.config
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\bin\Debug\BeogradskaFilharmonija.dll
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\bin\Debug\BeogradskaFilharmonija.pdb
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\bin\Debug\EntityFramework.dll
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\bin\Debug\ZU.PresentationFramework.dll
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\bin\Debug\ZU.WindowsBase.dll
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\bin\Debug\EntityFramework.xml
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\obj\Debug\BeogradskaFilharmonija.csproj.AssemblyReference.cache
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\obj\Debug\BeogradskaFilharmonija.csproj.CoreCompileInputs.cache
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\obj\Debug\BeogradskaFilharmonija.csproj.CopyComplete
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\obj\Debug\BeogradskaFilharmonija.dll
+C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonija\obj\Debug\BeogradskaFilharmonija.pdb

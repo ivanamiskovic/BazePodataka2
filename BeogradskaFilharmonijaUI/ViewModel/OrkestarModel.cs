@@ -16,6 +16,7 @@ namespace BeogradskaFilharmonijaUI.ViewModel
     {
         private List<orkestarSet> lista;
         private orkestarSet izabrani;
+        private bool dostupnost;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -57,6 +58,32 @@ namespace BeogradskaFilharmonijaUI.ViewModel
             {
                 lista = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("Lista"));
+            }
+        }
+
+        public bool Dostupnost
+        {
+            get
+            {
+                ProveriKorisnika();
+                return dostupnost;
+            }
+            set
+            {
+                dostupnost = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("Dostupnost"));
+            }
+        }
+
+        private void ProveriKorisnika()
+        {
+            if (GlobalnaKorisnickaKlasa.korisnik.Uloga == "admin")
+            {
+                dostupnost = true;
+            }
+            else
+            {
+                dostupnost = false;
             }
         }
     }
