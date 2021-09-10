@@ -67,23 +67,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BeogradskaFilharmonijaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BeogradskaFilharmonijaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BeogradskaFilharmonijaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="BeogradskaFilharmonijaModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BeogradskaFilharmonijaModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="BeogradskaFilharmonijaModel1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BeogradskaFilharmonijaModel1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BeogradskaFilharmonijaModel1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
-    </Compile>
     <Compile Include="clan_klubaSet.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="dao\AzuriranjeUBazi.cs" />
@@ -92,73 +92,89 @@
     <Compile Include="dao\DodavanjeUBazu.cs" />
     <Compile Include="dao\PomocnaKlasa.cs" />
     <Compile Include="djakSet.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="dvoranaSet.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="izvodjenjeSet.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="kartaSet.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="koncertSet.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Korisnik.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="orkestarSet.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="penzionerSet.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="posetilacSet.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="salaSet.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="sef_dirigentSet.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectBrClanova_Result.cs">
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectBrojClanova_Result.cs">
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectKartaCena_Result.cs">
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Selectvelsce_Result.cs">
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Statistic.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="studentSet.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel1.tt</DependentUpon>
+      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="BeogradskaFilharmonijaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BeogradskaFilharmonijaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="BeogradskaFilharmonijaModel.edmx.diagram">
       <DependentUpon>BeogradskaFilharmonijaModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BeogradskaFilharmonijaModel.edmx.sql" />
-    <Content Include="BeogradskaFilharmonijaModel1.Context.tt">
+    <Content Include="BeogradskaFilharmonijaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BeogradskaFilharmonijaModel1.Context.cs</LastGenOutput>
       <DependentUpon>BeogradskaFilharmonijaModel.edmx</DependentUpon>
+      <LastGenOutput>BeogradskaFilharmonijaModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="BeogradskaFilharmonijaModel1.tt">
+    <Content Include="BeogradskaFilharmonijaModel.edmx.sql" />
+    <Content Include="BeogradskaFilharmonijaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BeogradskaFilharmonijaModel1.cs</LastGenOutput>
       <DependentUpon>BeogradskaFilharmonijaModel.edmx</DependentUpon>
+      <LastGenOutput>BeogradskaFilharmonijaModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

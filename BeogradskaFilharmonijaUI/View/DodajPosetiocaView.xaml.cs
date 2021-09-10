@@ -72,7 +72,7 @@ namespace BeogradskaFilharmonijaUI.View
 
             // List<int> idKarte = PomocnaKlasa.IDListBox(listBox);
             int brojac = 0;
-            List<int> idKarte = PomocnaKlasa.IDListBox(listBox);
+            List<int> idKarte = PomocnaKlasa.IDListBox(listBox, "karta");
             int prolaz = DodavanjeUBazu.DodajPosetioca(brojac, idKarte);
 
             if (prolaz == 0)

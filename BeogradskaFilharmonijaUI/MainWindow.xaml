@@ -6,19 +6,19 @@
         xmlns:local="clr-namespace:BeogradskaFilharmonijaUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-	<Grid Background="Red">
-		<!--<Grid.Background>
+    <Grid>
+        <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Ivana\Desktop\New folder\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\beogradska_filharmonija.jpg" />
-        </Grid.Background>-->
-		<Button x:Name="buttonDvorana" BorderBrush="White" BorderThickness="2" Background="Transparent" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Content="Dvorana" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="131" Height="91" Click="buttonDvorana_Click"/>
-		<Button x:Name="buttonSala" BorderBrush="White" BorderThickness="2" Background="Transparent" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Content="Sale" HorizontalAlignment="Left" Margin="10,106,0,0" VerticalAlignment="Top" Width="131" Height="91" Click="buttonSala_Click"/>
-		<Button x:Name="buttonKoncert" BorderBrush="White" BorderThickness="2" Background="Transparent" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Content="Koncert" HorizontalAlignment="Left" Margin="208,106,0,0" VerticalAlignment="Top" Width="131" Height="91" Click="buttonKoncert_Click"/>
-		<Button x:Name="buttonOrkestar" BorderBrush="White" BorderThickness="2" Background="Transparent" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Content="Orkestar" HorizontalAlignment="Left" Margin="208,10,0,0" VerticalAlignment="Top" Width="130" Height="91" Click="buttonOrkestar_Click"/>
-		<Button x:Name="buttonPosetilac" BorderBrush="White" BorderThickness="2" Background="Transparent" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Content="Posetioci" HorizontalAlignment="Left" Margin="10,202,0,0" VerticalAlignment="Top" Width="131" Height="91" Click="buttonPosetilac_Click"/>
+        </Grid.Background>
+        <Button x:Name="buttonDvorana" BorderBrush="Black" BorderThickness="5" Background="Brown" Foreground="Black" FontSize="25" FontWeight="Bold" Content="Dvorana" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="131" Height="91" Click="buttonDvorana_Click"/>
+        <Button x:Name="buttonSala" BorderBrush="Black" BorderThickness="5" Background="Brown" Foreground="Black" FontSize="25" FontWeight="Bold" Content="Sale" HorizontalAlignment="Left" Margin="10,106,0,0" VerticalAlignment="Top" Width="131" Height="91" Click="buttonSala_Click"/>
+        <Button x:Name="buttonKoncert" BorderBrush="Black" BorderThickness="5" Background="Brown" Foreground="Black" FontSize="25" FontWeight="Bold" Content="Koncert" HorizontalAlignment="Left" Margin="208,106,0,0" VerticalAlignment="Top" Width="131" Height="91" Click="buttonKoncert_Click"/>
+        <Button x:Name="buttonOrkestar" BorderBrush="Black" BorderThickness="5" Background="Brown" Foreground="Black" FontSize="25" FontWeight="Bold" Content="Orkestar" HorizontalAlignment="Left" Margin="208,10,0,0" VerticalAlignment="Top" Width="130" Height="91" Click="buttonOrkestar_Click"/>
+        <Button x:Name="buttonPosetilac" BorderBrush="Black" BorderThickness="5" Background="Brown" Foreground="Black" FontSize="25" FontWeight="Bold" Content="Posetioci" HorizontalAlignment="Left" Margin="10,202,0,0" VerticalAlignment="Top" Width="131" Height="91" Click="buttonPosetilac_Click"/>
 		<!--<Button x:Name="buttonFjeProcedure" BorderBrush="White" BorderThickness="2" Background="Transparent" Foreground="WhiteSmoke" FontSize="23" FontWeight="Bold" Content="F-je" HorizontalAlignment="Left" Margin="207,203,0,0" VerticalAlignment="Top" Width="131" Height="91" Click="buttonFjeProcedure_Click"/>-->
-		<Button x:Name="buttonSef_dirigent" BorderBrush="White" BorderThickness="2" Background="Transparent" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Content="Sef_dirigent" HorizontalAlignment="Left" Margin="414,10,0,0" VerticalAlignment="Top" Width="130" Height="91" Click="ButtonSef_dirigent_Click"/>
-		<Button x:Name="buttonKarta" BorderBrush="White" BorderThickness="2" Background="Transparent" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Content="Karta" HorizontalAlignment="Left" VerticalAlignment="Top" Width="131" Height="91" Click="ButtonKarta_Click" Margin="413,106,0,0"/>
-		<Button x:Name="buttonClanKluba" BorderBrush="White" BorderThickness="2" Background="Transparent" Foreground="WhiteSmoke" FontSize="23" FontWeight="Bold" Content="Clan Kluba" HorizontalAlignment="Left" Margin="413,203,0,0" VerticalAlignment="Top" Width="131" Height="91" Click="ButtonClanKluba_Click_1"/>
-		<Button x:Name="buttonOdjaviSe" BorderBrush="White" BorderThickness="2" Background="Transparent" Foreground="WhiteSmoke" FontSize="23" FontWeight="Bold" Content="Odjavi se" HorizontalAlignment="Left" Margin="651,318,0,0" VerticalAlignment="Top" Width="131" Height="91" Click="buttonOdjaviSe_Click"/>
+        <Button x:Name="buttonSef_dirigent" BorderBrush="Black" BorderThickness="5" Background="Brown" Foreground="Black" FontSize="25" FontWeight="Bold" Content="Sef_dirigent" HorizontalAlignment="Left" Margin="414,10,0,0" VerticalAlignment="Top" Width="155" Height="91" Click="ButtonSef_dirigent_Click"/>
+        <Button x:Name="buttonKarta" BorderBrush="Black" BorderThickness="5" Background="Brown" Foreground="Black" FontSize="25" FontWeight="Bold" Content="Karta" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Height="91" Click="ButtonKarta_Click" Margin="413,106,0,0"/>
+        <Button x:Name="buttonClanKluba" BorderBrush="Black" BorderThickness="5" Background="Brown" Foreground="Black" FontSize="23" FontWeight="Bold" Content="Clan Kluba" HorizontalAlignment="Left" Margin="413,203,0,0" VerticalAlignment="Top" Width="156" Height="91" Click="ButtonClanKluba_Click_1"/>
+        <Button x:Name="buttonOdjaviSe" BorderBrush="Black" BorderThickness="5" Background="Brown" Foreground="Black" FontSize="23" FontWeight="Bold" Content="Odjavi se" HorizontalAlignment="Left" Margin="651,318,0,0" VerticalAlignment="Top" Width="131" Height="91" Click="buttonOdjaviSe_Click"/>
 	</Grid>
 </Window>

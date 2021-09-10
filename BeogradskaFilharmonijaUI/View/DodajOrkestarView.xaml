@@ -6,21 +6,24 @@
         xmlns:local="clr-namespace:BeogradskaFilharmonijaUI.View"
         mc:Ignorable="d"
         Title="DodajOrkestarView" Height="270" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Background="DarkRed">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\muzika.jpg"/>
+        </Grid.Background>
         <!--Content="Id :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="23" Margin="105,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="textBox_TextChanged"/> -->
         <TextBlock x:Name="textBlock" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,41,0,0" Width="272" Height="25" />
 
-        <Label Content="Ime :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="45"/>
+        <Label Content="Ime :" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="45"/>
         <TextBox x:Name="textBox1" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="23" Margin="105,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="textBox1_TextChanged"/>
         <TextBlock x:Name="textBlock1" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,94,0,0" Width="272" Height="25" />
 
-        <Label Content="Brclan :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Brclan :" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Width="75"/>
         <TextBox x:Name="textBox2" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="23" Margin="105,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="textBox2_TextChanged"/>
         <TextBlock x:Name="textBlock2" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,152,0,0" Width="272" Height="25" />
 
-        <Button x:Name="dodaj" Foreground="WhiteSmoke" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" Content="Dodaj" HorizontalAlignment="Left" Margin="10,182,0,0" VerticalAlignment="Top" Width="75" Click="dodaj_Click"/>
-        <Button x:Name="vrati_se" Foreground="WhiteSmoke" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" Content="Vrati se" HorizontalAlignment="Left" Margin="206,182,0,0" VerticalAlignment="Top" Width="76" Click="vrati_se_Click"/>
+        <Button x:Name="dodaj" Foreground="Black" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" Content="Dodaj" HorizontalAlignment="Left" Margin="10,182,0,0" VerticalAlignment="Top" Width="75" Click="dodaj_Click"/>
+        <Button x:Name="vrati_se" Foreground="Black" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" Content="Vrati se" HorizontalAlignment="Left" Margin="206,182,0,0" VerticalAlignment="Top" Width="76" Click="vrati_se_Click"/>
 
         <TextBlock x:Name="textBlockUspeh" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,209,0,0" Width="272" Height="25" />
 

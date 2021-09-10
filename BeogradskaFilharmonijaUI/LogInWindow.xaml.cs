@@ -36,6 +36,8 @@ namespace BeogradskaFilharmonijaUI
 				return;
 			}
 
+
+
 			Korisnik postoji = PomocnaKlasa.ProveriDaliPostojiKorisnik(korisnickoImeTextBox.Text, sifraBox.Password);
 			if (postoji == null)
 			{
@@ -46,6 +48,9 @@ namespace BeogradskaFilharmonijaUI
 			}
 
 			GlobalnaKorisnickaKlasa.korisnik = postoji;
+			GlobalnaKorisnickaKlasa.korisnik.Uloga = GlobalnaKorisnickaKlasa.korisnik.Uloga.Trim();
+			GlobalnaKorisnickaKlasa.korisnik.Sifra = GlobalnaKorisnickaKlasa.korisnik.Sifra.Trim();
+			GlobalnaKorisnickaKlasa.korisnik.KorisnickoIme = GlobalnaKorisnickaKlasa.korisnik.KorisnickoIme.Trim();
 
 			MainWindow view = new MainWindow();
 			Close();

@@ -10,23 +10,33 @@ namespace BeogradskaFilharmonija.dao
     public class PomocnaKlasa
     {
 
-        public static List<int> IDListBox(ListBox lista)
+        public static List<int> IDListBox(ListBox lista, string opis)
         {
             List<int> povratna = new List<int>();
-
-            foreach (var item in lista.Items)
-            {
-                CheckBox cb = (CheckBox)item;
-
-                if (cb.IsChecked == true)
+            try {
+                foreach (var item in lista.Items)
                 {
-                    string natpis = cb.Content.ToString();
-                    string[] reci = natpis.Split(' ');
-                    int id = Convert.ToInt32(reci[0]);
+                    CheckBox cb = (CheckBox)item;
 
-                    povratna.Add(id);
+                    if (cb.IsChecked == true)
+                    {
+                        string natpis = cb.Content.ToString();
+                        string[] reci = natpis.Split(' ');
+                        int id = 0;
+                        if (opis == "sale")
+                             id = Convert.ToInt32(reci[0]);
+                        else
+                             id = Convert.ToInt32(reci[1]);
+
+                       
+                        povratna.Add(id);
+                    }
                 }
+            } 
+            catch
+            {
             }
+        
             return povratna;
         }
 
@@ -49,7 +59,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<string> povratna = new List<string>();
 
-            using (var db = new BeogradskaFilharmonijaModelContainer())
+            using (var db = new BeogradskaFilharmonijaModelEntities1())
             {
                 try
                 {
@@ -76,7 +86,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<string> povratna = new List<string>();
 
-            using (var db = new BeogradskaFilharmonijaModelContainer())
+            using (var db = new BeogradskaFilharmonijaModelEntities1())
             {
                 try
                 {
@@ -100,7 +110,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<string> povratna = new List<string>();
 
-            using (var db = new BeogradskaFilharmonijaModelContainer())
+            using (var db = new BeogradskaFilharmonijaModelEntities1())
             {
                 try
                 {
@@ -122,13 +132,14 @@ namespace BeogradskaFilharmonija.dao
 
         public static Korisnik ProveriDaliPostojiKorisnik(string korisnickoIme, string sifra)
 		{
-            using (var db = new BeogradskaFilharmonijaModelContainer())
+            using (var db = new BeogradskaFilharmonijaModelEntities1())
             {
                 try
                 {
                     foreach (var item in db.Korisnik)
                     {
-                        if (item.KorisnickoIme == korisnickoIme && item.Sifra == sifra)
+                        int duzina = item.KorisnickoIme.Length;
+                        if (item.KorisnickoIme == korisnickoIme || item.Sifra == sifra)
 						{
                             return item;
 						}

@@ -6,16 +6,19 @@
         xmlns:local="clr-namespace:BeogradskaFilharmonijaUI.View"
         mc:Ignorable="d"
         Title="DodajPosetiocaView" Height="280" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Background="DarkRed">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\muzika.jpg"/>
+        </Grid.Background>
        <!-- <Label Content="Id :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="23" Margin="57,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" TextChanged="textBox_TextChanged"/> -->
-        <TextBlock x:Name="textBlock" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,41,0,0" Width="272" Height="25" />
+        <TextBlock x:Name="textBlock" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,41,0,0" Width="272" Height="25" />
 
-        <Label Content="Karte :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
+        <Label Content="Karte :" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="listBox" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="98" Width="297" VerticalAlignment="Top" Margin="57,71,0,0"/>
 
-        <Button x:Name="dodaj" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" Foreground="WhiteSmoke" FontWeight="Bold" Content="Dodaj" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top" Width="75" Click="dodaj_Click"/>
-        <Button x:Name="vrati_se" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" Foreground="WhiteSmoke" FontWeight="Bold" Content="Vrati se" HorizontalAlignment="Left" Margin="278,181,0,0" VerticalAlignment="Top" Width="76" Click="vrati_se_Click"/>
+        <Button x:Name="dodaj" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" Foreground="Black" FontWeight="Bold" Content="Dodaj" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top" Width="75" Click="dodaj_Click"/>
+        <Button x:Name="vrati_se" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" Foreground="Black" FontWeight="Bold" Content="Vrati se" HorizontalAlignment="Left" Margin="278,181,0,0" VerticalAlignment="Top" Width="76" Click="vrati_se_Click"/>
 
         <TextBlock x:Name="textBlockUspeh" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,208,0,0" Width="344" Height="25" />
 

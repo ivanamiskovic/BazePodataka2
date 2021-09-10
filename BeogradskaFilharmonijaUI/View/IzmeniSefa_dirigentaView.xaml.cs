@@ -110,6 +110,7 @@ namespace BeogradskaFilharmonijaUI.View
                 textBlockUspeh.Text = "Uspesno ste izmenili sefa dirigenta sa id-jem: " + id;
                 textBlockUspeh.Foreground = Brushes.Black;
             }
+            
         }
 
         private void vrati_se_Click(object sender, RoutedEventArgs e)

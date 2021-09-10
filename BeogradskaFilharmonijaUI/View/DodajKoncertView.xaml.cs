@@ -153,14 +153,14 @@ namespace BeogradskaFilharmonijaUI.View
                 return;
             }
 
-           // int id = Convert.ToInt32(textBox.Text);
+           //int id = Convert.ToInt32(textBox.Text);
             int trajanje = Convert.ToInt32(textBox1.Text);
             string naziv = textBox2.Text;
             string zanr = textBox3.Text;
 
-            List<int> idSale = PomocnaKlasa.IDListBox(listBox);
-            List<int> idOrkestar = PomocnaKlasa.IDListBox(listBox1);
-            List<int> idSefdirigient = PomocnaKlasa.IDListBox(listBox2);
+            List<int> idSale = PomocnaKlasa.IDListBox(listBox, "sale");
+            List<int> idOrkestar = PomocnaKlasa.IDListBox(listBox1, "sale");
+            List<int> idSefdirigient = PomocnaKlasa.IDListBox(listBox2, "sale");
 
             int prolaz = DodavanjeUBazu.DodajKoncert(trajanje, naziv, zanr, idSale, idOrkestar, idSefdirigient);
 
@@ -187,6 +187,8 @@ namespace BeogradskaFilharmonijaUI.View
                 textBlockUspeh.Text = "Desila greska!";
                 textBlockUspeh.Foreground = Brushes.White;
             }
+
+            this.Close();
         }
 
         private void vrati_se_Click(object sender, RoutedEventArgs e)

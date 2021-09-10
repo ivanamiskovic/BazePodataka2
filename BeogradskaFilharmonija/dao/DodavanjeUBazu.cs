@@ -12,7 +12,7 @@ namespace BeogradskaFilharmonija.dao
         public static bool DodajDvoranu(string mesto, string naziv, string ulica, int broj)
         {
             dvoranaSet dvorana;
-            using (var db = new BeogradskaFilharmonijaModelContainer())
+            using (var db = new BeogradskaFilharmonijaModelEntities1())
             {
                 try
                 {
@@ -44,7 +44,7 @@ namespace BeogradskaFilharmonija.dao
             clan_klubaSet clanKluba;
             posetilacSet posetilac;
 
-            using (var db = new BeogradskaFilharmonijaModelContainer())
+            using (var db = new BeogradskaFilharmonijaModelEntities1())
             {
                 try
                 {
@@ -98,7 +98,7 @@ namespace BeogradskaFilharmonija.dao
             salaSet sala;
             dvoranaSet dvorana;
 
-            using (var db = new BeogradskaFilharmonijaModelContainer())
+            using (var db = new BeogradskaFilharmonijaModelEntities1())
             {
                 try
                 {
@@ -132,7 +132,7 @@ namespace BeogradskaFilharmonija.dao
             kartaSet karta;
             izvodjenjeSet izvodjenje;
 
-            using (var db = new BeogradskaFilharmonijaModelContainer())
+            using (var db = new BeogradskaFilharmonijaModelEntities1())
             {
                 try
                 {
@@ -173,7 +173,7 @@ namespace BeogradskaFilharmonija.dao
 
             posetilacSet posetilac;
 
-            using (var db = new BeogradskaFilharmonijaModelContainer())
+            using (var db = new BeogradskaFilharmonijaModelEntities1())
             {
                 try
                 {
@@ -190,9 +190,9 @@ namespace BeogradskaFilharmonija.dao
 
                         foreach (var item in idKarte)
                         {
-                            kartaSet karta = new kartaSet();
-                            karta = db.kartaSet.Where(c => c.br.Equals(item)).FirstOrDefault();
-                            db.kartaSet.Add(karta);
+                            //kartaSet karta = new kartaSet();
+                            //karta = db.kartaSet.Where(c => c.br.Equals(item)).FirstOrDefault();
+                            //db.kartaSet.Add(karta);
                             db.posetilacSet.Add(posetilac);
 
                         }
@@ -225,16 +225,22 @@ namespace BeogradskaFilharmonija.dao
 
             koncertSet koncert;
 
-            using (var db = new BeogradskaFilharmonijaModelContainer())
+            using (var db = new BeogradskaFilharmonijaModelEntities1())
             {
                 try
                 {
                     
                     koncert = new koncertSet();
-                    
+
                     koncert.traj = trajanje;
                     koncert.nazkon = naziv;
                     koncert.znrmuzik = zanr;
+
+                    db.koncertSet.Add(koncert);
+                    db.SaveChanges();
+
+                
+
 
                     foreach (var item in idSale)
                     {
@@ -257,9 +263,9 @@ namespace BeogradskaFilharmonija.dao
 
                     foreach (var item in idOrkestra)
                     {
-                        orkestarSet glumac = new orkestarSet();
-                        glumac = db.orkestarSet.Where(c => c.id.Equals(item)).FirstOrDefault();
-                        db.orkestarSet.Add(glumac);
+                        orkestarSet orkestar = new orkestarSet();
+                        orkestar = db.orkestarSet.Where(c => c.id.Equals(item)).FirstOrDefault();
+                        db.orkestarSet.Add(orkestar);
 
                     }
                     foreach (var item in idSef_dirigent)
@@ -283,7 +289,7 @@ namespace BeogradskaFilharmonija.dao
         {
             orkestarSet orkestar;
 
-            using (var db = new BeogradskaFilharmonijaModelContainer())
+            using (var db = new BeogradskaFilharmonijaModelEntities1())
             {
                 try
                 {
@@ -311,7 +317,7 @@ namespace BeogradskaFilharmonija.dao
         {
             sef_dirigentSet sef_dirigent;
 
-            using (var db = new BeogradskaFilharmonijaModelContainer())
+            using (var db = new BeogradskaFilharmonijaModelEntities1())
             {
                 try
                 {
@@ -337,7 +343,7 @@ namespace BeogradskaFilharmonija.dao
         {
             Korisnik korisnik;
 
-            using (var db = new BeogradskaFilharmonijaModelContainer())
+            using (var db = new BeogradskaFilharmonijaModelEntities1())
             {
                 try
                 {

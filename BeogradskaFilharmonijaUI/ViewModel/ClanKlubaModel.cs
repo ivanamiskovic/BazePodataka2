@@ -76,7 +76,7 @@ namespace BeogradskaFilharmonijaUI.ViewModel
 
         private void ProveriKorisnika()
         {
-            if (GlobalnaKorisnickaKlasa.korisnik.Uloga == "kupac")
+            if (GlobalnaKorisnickaKlasa.korisnik.Uloga == "Kupac")
             {
                 dostupnost = true;
             }

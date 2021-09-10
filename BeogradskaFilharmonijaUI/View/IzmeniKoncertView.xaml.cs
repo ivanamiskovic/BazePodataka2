@@ -115,6 +115,8 @@ namespace BeogradskaFilharmonijaUI.View
                 dodaj.Visibility = Visibility.Visible;
         }
 
+
+
         private void izmeni_Click(object sender, RoutedEventArgs e)
         {
             if (textBox.Text == "" || textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
@@ -131,9 +133,9 @@ namespace BeogradskaFilharmonijaUI.View
             string zanr = textBox3.Text;
 
 
-            List<int> idSale = PomocnaKlasa.IDListBox(listBox);
-            List<int> idOrkestra = PomocnaKlasa.IDListBox(listBox1);
-            List<int> idSefadirigenta = PomocnaKlasa.IDListBox(listBox2);
+            List<int> idSale = PomocnaKlasa.IDListBox(listBox, "isto");
+            List<int> idOrkestra = PomocnaKlasa.IDListBox(listBox1, "isto");
+            List<int> idSefadirigenta = PomocnaKlasa.IDListBox(listBox2, "isto");
 
 
 

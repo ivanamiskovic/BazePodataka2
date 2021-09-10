@@ -238,7 +238,8 @@ namespace BeogradskaFilharmonijaUI.View
             int idKoncerta = Int32.Parse(reci[4]);
 
             bool prolaz = DodavanjeUBazu.DodajKartu(red, brojSedista, danIzvodjenja, satIzvodjenja, cena, idSale, idKoncerta);
-          /*  if (prolaz == false)
+            this.Close();
+            /*  if (prolaz == false)
             {
                 textBlockUspeh.Text = "Vec postoji karta sa id-jem: " + id;
                 textBlockUspeh.Foreground = Brushes.White;

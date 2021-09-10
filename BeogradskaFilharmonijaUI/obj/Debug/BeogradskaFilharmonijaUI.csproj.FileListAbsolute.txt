@@ -277,3 +277,7 @@ C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonijaUI\obj\Debug\LogIn
 C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonijaUI\obj\Debug\RegisterWindow.g.cs
 C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonijaUI\obj\Debug\LogInWindow.baml
 C:\Users\Nenad-PC\Desktop\BazePodataka2\BeogradskaFilharmonijaUI\obj\Debug\RegisterWindow.baml
+C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\obj\Debug\LogInWindow.g.cs
+C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\obj\Debug\RegisterWindow.g.cs
+C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\obj\Debug\LogInWindow.baml
+C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\obj\Debug\RegisterWindow.baml

@@ -6,13 +6,16 @@
         xmlns:local="clr-namespace:BeogradskaFilharmonijaUI.View"
         mc:Ignorable="d"
         Title="KartaView" Height="650" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Background="DarkRed">
-        <TextBlock Text="Karte" Foreground="WhiteSmoke" FontSize="30" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Margin="10,30,10,527" />
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\muzika.jpg"/>
+        </Grid.Background>
+        <TextBlock Text="Karte" Foreground="Black" FontSize="30" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Margin="10,30,10,527" />
 
-		<Button Content="Dodaj" BorderBrush="Crimson" BorderThickness="2" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="10,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Dodaj}" IsEnabled="{Binding Dostupnost}"/>
-		<Button Content="Obrisi" BorderBrush="Crimson" BorderThickness="2" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="392,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Obrisi}" IsEnabled="{Binding Dostupnost}"/>
-		<Button Content="Izmeni" BorderBrush="Crimson" BorderThickness="2" Foreground="WhiteSmoke" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="200,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Izmeni}" IsEnabled="{Binding Dostupnost}"/>
-
+		<Button Content="Dodaj" BorderBrush="Crimson" BorderThickness="2" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="10,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Dodaj}" IsEnabled="{Binding Dostupnost}"/>
+		<Button Content="Obrisi" BorderBrush="Crimson" BorderThickness="2" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="392,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Obrisi}" IsEnabled="{Binding Dostupnost}"/>
+		<!--<Button Content="Izmeni" BorderBrush="Crimson" BorderThickness="2" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="200,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Izmeni}" IsEnabled="{Binding Dostupnost}"/>
+-->
         <DataGrid BorderBrush="Crimson" BorderThickness="2" ItemsSource="{Binding Path=Lista, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Izabrani}" AutoGenerateColumns="False" Height="280" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="567" SelectionMode="Single" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Width="*" Binding="{Binding br}" />

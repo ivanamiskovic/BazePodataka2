@@ -114,7 +114,7 @@ namespace BeogradskaFilharmonijaUI.View
                // textBlockUspeh.Text = "Uspesno ste dodali orkestar sa id-jem: " + id;
                 textBlockUspeh.Foreground = Brushes.Black;
             }
-           
+            this.Close();
         }
 
         private void vrati_se_Click(object sender, RoutedEventArgs e)

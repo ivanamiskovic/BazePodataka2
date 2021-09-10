@@ -6,35 +6,38 @@
         xmlns:local="clr-namespace:BeogradskaFilharmonijaUI.View"
         mc:Ignorable="d"
         Title="IzmeniKoncertView" Height="530" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Background="DarkRed">
-        <Label Content="Id :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.446,1.731"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\muzika.jpg"/>
+        </Grid.Background>
+        <Label Content="Id :" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.446,1.731"/>
         <TextBox x:Name="textBox" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="23" Margin="105,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="textBox_TextChanged" IsReadOnly="True" RenderTransformOrigin="0.5,0.913"/>
         <TextBlock x:Name="textBlock" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,80,0,0" Width="272" Height="25" />
 
-        <Label Content="Trajanje :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.427,-0.231"/>
+        <Label Content="Trajanje :" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.427,-0.231"/>
         <TextBox x:Name="textBox1" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="23" Margin="105,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" TextChanged="textBox1_TextChanged"/>
         <TextBlock x:Name="textBlock1" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,160,0,0" Width="272" Height="25" />
         <Label Content="min" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="243,129,0,0" VerticalAlignment="Top" Width="39"/>
 
-        <Label Content="Naziv :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="62"/>
+        <Label Content="Naziv :" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="62"/>
         <TextBox x:Name="textBox2" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="23" Margin="105,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="textBox2_TextChanged" RenderTransformOrigin="0.559,3.978"/>
         <TextBlock x:Name="textBlock2" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,237,0,0" Width="272" Height="25" />
 
-        <Label Content="Zanr :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.611,1.365"/>
+        <Label Content="Zanr :" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.611,1.365"/>
         <TextBox x:Name="textBox3"  BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="23" Margin="105,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="textBox3_TextChanged"/>
         <TextBlock x:Name="textBlock3" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,316,0,0" Width="272" Height="26" />
 
-        <Label Content="Sale :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="370,339,0,0" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.844,0.865"/>
+        <Label Content="Sale :" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Left" Margin="370,339,0,0" VerticalAlignment="Top" Width="45" RenderTransformOrigin="0.844,0.865"/>
         <ListBox x:Name="listBox" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="98" Width="177" Margin="305,370,0,0" VerticalAlignment="Top" IsEnabled="True"/>
 
-        <Label Content="Orkestar :" Foreground="WhiteSmoke" FontWeight="Bold" HorizontalAlignment="Left" Margin="370,13,0,0" VerticalAlignment="Top" Width="70"/>
+        <Label Content="Orkestar :" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Left" Margin="370,13,0,0" VerticalAlignment="Top" Width="70"/>
         <ListBox x:Name="listBox1" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="98" Width="177" Margin="305,49,0,0" VerticalAlignment="Top"/>
 
-        <Label Content="SefDirigent :" Foreground="WhiteSmoke" FontWeight="ExtraBold" HorizontalAlignment="Left" Margin="370,179,0,0" VerticalAlignment="Top" Width="70"/>
+        <Label Content="SefDirigent :" Foreground="Black" FontWeight="ExtraBold" HorizontalAlignment="Left" Margin="370,179,0,0" VerticalAlignment="Top" Width="70"/>
         <ListBox x:Name="listBox2"  BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="98" Width="177" Margin="305,210,0,0" VerticalAlignment="Top"/>
 
-        <Button x:Name="dodaj" Content="Izmeni" Foreground="WhiteSmoke" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Margin="10,376,0,0" VerticalAlignment="Top" Width="75" Click="izmeni_Click"/>
-        <Button x:Name="vrati_se" Content="Vrati se" Foreground="WhiteSmoke" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Margin="206,376,0,0" VerticalAlignment="Top" Width="76" Click="vrati_se_Click"/>
+        <Button x:Name="dodaj" Content="Izmeni" Foreground="Black" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Margin="10,376,0,0" VerticalAlignment="Top" Width="75" Click="izmeni_Click"/>
+        <Button x:Name="vrati_se" Content="Vrati se" Foreground="Black" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Margin="206,376,0,0" VerticalAlignment="Top" Width="76" Click="vrati_se_Click"/>
 
         <TextBlock x:Name="textBlockUspeh" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,444,0,0" Width="261" Height="24" />
 

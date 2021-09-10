@@ -133,8 +133,8 @@ namespace BeogradskaFilharmonijaUI.View
             int idDvorane = Convert.ToInt32(reci[1]);
 
             bool prolaz = DodavanjeUBazu.DodajSalu(sedista, scena, idDvorane);
-           
-            
+            this.Close();
+
         }
         //vrati se
         private void vrati_se_Click(object sender, RoutedEventArgs e)

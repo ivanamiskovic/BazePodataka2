@@ -100,8 +100,8 @@ namespace BeogradskaFilharmonijaUI.View
             string prezime = textBox2.Text;
 
             bool prolaz = DodavanjeUBazu.DodajSefa_dirigenta(ime, prezime);
-        
-          
+            this.Close();
+
         }
 
         private void vrati_se_Click(object sender, RoutedEventArgs e)
