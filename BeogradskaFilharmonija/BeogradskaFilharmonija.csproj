@@ -125,24 +125,6 @@
     <Compile Include="sef_dirigentSet.cs">
       <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="SelectBrClanova_Result.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SelectBrojClanova_Result.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SelectKartaCena_Result.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Selectvelsce_Result.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Statistic.cs">
       <DependentUpon>BeogradskaFilharmonijaModel.tt</DependentUpon>
     </Compile>

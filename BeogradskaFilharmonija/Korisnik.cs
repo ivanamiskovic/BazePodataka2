@@ -17,5 +17,6 @@ namespace BeogradskaFilharmonija
         public string KorisnickoIme { get; set; }
         public string Sifra { get; set; }
         public string Uloga { get; set; }
+        public Nullable<int> Odobreno { get; set; }
     }
 }

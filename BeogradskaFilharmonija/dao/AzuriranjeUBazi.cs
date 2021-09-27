@@ -12,7 +12,7 @@ namespace BeogradskaFilharmonija.dao
         {
             dvoranaSet dvorana;
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 dvorana = db.dvoranaSet.Where(c => c.iddvor.Equals(id)).FirstOrDefault();
 
@@ -40,7 +40,7 @@ namespace BeogradskaFilharmonija.dao
             salaSet sala;
             dvoranaSet dvorana;
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 sala = db.salaSet.Where(c => c.idsal.Equals(id)).FirstOrDefault();
                 dvorana = db.dvoranaSet.Where(c => c.iddvor.Equals(id)).FirstOrDefault();
@@ -68,7 +68,7 @@ namespace BeogradskaFilharmonija.dao
             kartaSet karta;
             izvodjenjeSet izvodjenje;
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 karta = db.kartaSet.Where(c => c.br.Equals(id)).FirstOrDefault();
                 izvodjenje = db.izvodjenjeSet.Where(c => c.sala_idsal_izvodjenje.Equals(idSale)).FirstOrDefault();
@@ -110,7 +110,7 @@ namespace BeogradskaFilharmonija.dao
                 return 2;
             }
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 koncert = db.koncertSet.Where(c => c.idkon.Equals(id)).FirstOrDefault();
 
@@ -151,7 +151,7 @@ namespace BeogradskaFilharmonija.dao
         public static bool AzurirajOrkestar(int id, string ime, Int32 brclan)
         {
             orkestarSet orkestar;
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 orkestar = db.orkestarSet.Where(c => c.id.Equals(id)).FirstOrDefault();
 
@@ -177,7 +177,7 @@ namespace BeogradskaFilharmonija.dao
         {
             sef_dirigentSet sef_dirigent;
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 sef_dirigent = db.sef_dirigentSet.Where(c => c.iddir.Equals(id)).FirstOrDefault();
 
@@ -203,7 +203,7 @@ namespace BeogradskaFilharmonija.dao
             clan_klubaSet clan_Kluba;
 
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 clan_Kluba = db.clan_klubaSet.Where(c => c.sfr.Equals(sfr)).FirstOrDefault();
 

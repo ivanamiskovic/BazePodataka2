@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="07b38b3bf773474dbb1341430fdd8941" Name="Diagram1">
+      <Diagram DiagramId="eceb8100fed64374bae8468f4fc4726c" Name="Diagram1">
         <EntityTypeShape EntityType="BeogradskaFilharmonijaModelModel.clan_klubaSet" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
         <EntityTypeShape EntityType="BeogradskaFilharmonijaModelModel.djakSet" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BeogradskaFilharmonijaModelModel.dvoranaSet" Width="1.5" PointX="1.5" PointY="22.25" IsExpanded="true" />
@@ -18,6 +18,7 @@
         <EntityTypeShape EntityType="BeogradskaFilharmonijaModelModel.salaSet" Width="1.5" PointX="1.5" PointY="18.25" IsExpanded="true" />
         <EntityTypeShape EntityType="BeogradskaFilharmonijaModelModel.sef_dirigentSet" Width="1.5" PointX="3.75" PointY="16.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BeogradskaFilharmonijaModelModel.studentSet" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeogradskaFilharmonijaModelModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="BeogradskaFilharmonijaModelModel.FK_clan_klubadjak" ManuallyRouted="false" />
         <AssociationConnector Association="BeogradskaFilharmonijaModelModel.FK_clan_klubapenzioner" ManuallyRouted="false" />
         <AssociationConnector Association="BeogradskaFilharmonijaModelModel.FK_clan_klubastudent" ManuallyRouted="false" />

@@ -59,7 +59,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<string> povratna = new List<string>();
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -86,7 +86,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<string> povratna = new List<string>();
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -110,7 +110,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<string> povratna = new List<string>();
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -132,7 +132,7 @@ namespace BeogradskaFilharmonija.dao
 
         public static Korisnik ProveriDaliPostojiKorisnik(string korisnickoIme, string sifra)
 		{
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {

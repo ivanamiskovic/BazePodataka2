@@ -12,7 +12,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<dvoranaSet> lista = new List<dvoranaSet>();
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -34,7 +34,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<salaSet> lista = new List<salaSet>();
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -56,7 +56,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<kartaSet> lista = new List<kartaSet>();
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -78,7 +78,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<kartaSet> lista = new List<kartaSet>();
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -102,7 +102,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<koncertSet> lista = new List<koncertSet>();
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -123,7 +123,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<orkestarSet> lista = new List<orkestarSet>();
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -144,7 +144,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<sef_dirigentSet> lista = new List<sef_dirigentSet>();
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -165,7 +165,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<izvodjenjeSet> lista = new List<izvodjenjeSet>();
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -187,7 +187,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<posetilacSet> lista = new List<posetilacSet>();
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -209,7 +209,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<clan_klubaSet> lista = new List<clan_klubaSet>();
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -231,7 +231,7 @@ namespace BeogradskaFilharmonija.dao
         {
             List<Korisnik> lista = new List<Korisnik>();
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {

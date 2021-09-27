@@ -12,7 +12,7 @@ namespace BeogradskaFilharmonija.dao
         public static bool DodajDvoranu(string mesto, string naziv, string ulica, int broj)
         {
             dvoranaSet dvorana;
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -44,7 +44,7 @@ namespace BeogradskaFilharmonija.dao
             clan_klubaSet clanKluba;
             posetilacSet posetilac;
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -98,7 +98,7 @@ namespace BeogradskaFilharmonija.dao
             salaSet sala;
             dvoranaSet dvorana;
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -132,7 +132,7 @@ namespace BeogradskaFilharmonija.dao
             kartaSet karta;
             izvodjenjeSet izvodjenje;
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -173,7 +173,7 @@ namespace BeogradskaFilharmonija.dao
 
             posetilacSet posetilac;
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -225,7 +225,7 @@ namespace BeogradskaFilharmonija.dao
 
             koncertSet koncert;
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -289,7 +289,7 @@ namespace BeogradskaFilharmonija.dao
         {
             orkestarSet orkestar;
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -317,7 +317,7 @@ namespace BeogradskaFilharmonija.dao
         {
             sef_dirigentSet sef_dirigent;
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
@@ -343,7 +343,7 @@ namespace BeogradskaFilharmonija.dao
         {
             Korisnik korisnik;
 
-            using (var db = new BeogradskaFilharmonijaModelEntities1())
+            using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
                 {
