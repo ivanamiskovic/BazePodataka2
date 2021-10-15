@@ -36,8 +36,8 @@
         <Label Content="SefDirigent :" Foreground="Black" FontWeight="ExtraBold" HorizontalAlignment="Left" Margin="370,179,0,0" VerticalAlignment="Top" Width="70"/>
         <ListBox x:Name="listBox2"  BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="98" Width="177" Margin="305,210,0,0" VerticalAlignment="Top"/>
 
-        <Button x:Name="dodaj" Content="Izmeni" Foreground="Black" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Margin="10,376,0,0" VerticalAlignment="Top" Width="75" Click="izmeni_Click"/>
-        <Button x:Name="vrati_se" Content="Vrati se" Foreground="Black" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Margin="206,376,0,0" VerticalAlignment="Top" Width="76" Click="vrati_se_Click"/>
+        <Button x:Name="dodaj" Content="Izmeni" Foreground="Black" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="4" HorizontalAlignment="Left" Margin="10,376,0,0" VerticalAlignment="Top" Width="75" Click="izmeni_Click"/>
+        <Button x:Name="vrati_se" Content="Vrati se" Foreground="Black" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="4" HorizontalAlignment="Left" Margin="206,376,0,0" VerticalAlignment="Top" Width="76" Click="vrati_se_Click"/>
 
         <TextBlock x:Name="textBlockUspeh" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,444,0,0" Width="261" Height="24" />
 

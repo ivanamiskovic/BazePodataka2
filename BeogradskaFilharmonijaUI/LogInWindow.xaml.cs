@@ -36,12 +36,20 @@ namespace BeogradskaFilharmonijaUI
 				return;
 			}
 
-
-
 			Korisnik postoji = PomocnaKlasa.ProveriDaliPostojiKorisnik(korisnickoImeTextBox.Text, sifraBox.Password);
 			if (postoji == null)
 			{
 				textBlockUspeh.Text = "Korisnik sa unetim kredencijalima ne postoji, probajte ponovo";
+				textBlockUspeh.Foreground = Brushes.Red;
+
+				return;
+			}
+
+			//TODO DODATO
+			bool odobren = PomocnaKlasa.DaliJeKorisnikOdobren(korisnickoImeTextBox.Text);
+			if (odobren == false)
+			{
+				textBlockUspeh.Text = "Korisnik nije odobren od strane admina, probajte kasnije ponovo";
 				textBlockUspeh.Foreground = Brushes.Red;
 
 				return;

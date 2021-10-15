@@ -1,0 +1,19 @@
+﻿<Window x:Class="BeogradskaFilharmonijaUI.OdobriView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeogradskaFilharmonijaUI"
+        mc:Ignorable="d"
+        Title="OdobriView" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\muzika.jpg"/>
+        </Grid.Background>
+        
+        <Label HorizontalContentAlignment="Center" Content="Korisnik:" Background="Transparent" Foreground="DarkRed" FontSize="22" FontWeight="Bold" Margin="10,66,10,306"/>
+        <ComboBox x:Name="korisnikComboBox" FontSize="22" FontWeight="Bold" Margin="272,134,273,202" />
+        <Button Content="Odobri profil" BorderBrush="Crimson" BorderThickness="2" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="306,242,0,0" VerticalAlignment="Top" Width="165" Height="45" Click="Button_Click"/>
+        <TextBlock x:Name="textBlockUspeh" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" Height="45" Width="156" Margin="195,311,197,63"/>
+    </Grid>
+</Window>

@@ -37,8 +37,8 @@
         <Label Content="Posetilac :" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,365,0,0" VerticalAlignment="Top" Width="75"/>
         <ComboBox x:Name="comboBox1" BorderBrush="Crimson" BorderThickness="2"  HorizontalAlignment="Left"  Margin="118,365,0,0" VerticalAlignment="Top" Width="177"/>
 
-        <Button x:Name="dodaj" Foreground="Black" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="2" Content="Dodaj" HorizontalAlignment="Left" Margin="10,423,0,0" VerticalAlignment="Top" Width="75" Click="Dodaj_Click"/>
-        <Button x:Name="vrati_se" Foreground="Black" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="2" Content="Vrati se" HorizontalAlignment="Left" Margin="219,422,0,0" VerticalAlignment="Top" Width="76" Click="Vrati_se_Click" Height="23"/>
+        <Button x:Name="dodaj" Foreground="Black" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="4" Content="Dodaj" HorizontalAlignment="Left" Margin="10,423,0,0" VerticalAlignment="Top" Width="75" Click="Dodaj_Click"/>
+        <Button x:Name="vrati_se" Foreground="Black" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="4" Content="Vrati se" HorizontalAlignment="Left" Margin="237,423,0,0" VerticalAlignment="Top" Width="76" Click="Vrati_se_Click" Height="23"/>
 
         <TextBlock x:Name="textBlockUspeh" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,456,0,0" Width="272" Height="25" />
 

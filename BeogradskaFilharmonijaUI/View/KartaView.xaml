@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeogradskaFilharmonijaUI.View"
         mc:Ignorable="d"
-        Title="KartaView" Height="650" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="KartaView" Height="650" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\muzika.jpg"/>
         </Grid.Background>
         <TextBlock Text="Karte" Foreground="Black" FontSize="30" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Margin="10,30,10,527" />
 
-		<Button Content="Dodaj" BorderBrush="Crimson" BorderThickness="2" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="10,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Dodaj}" IsEnabled="{Binding Dostupnost}"/>
-		<Button Content="Obrisi" BorderBrush="Crimson" BorderThickness="2" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="392,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Obrisi}" IsEnabled="{Binding Dostupnost}"/>
-		<!--<Button Content="Izmeni" BorderBrush="Crimson" BorderThickness="2" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="200,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Izmeni}" IsEnabled="{Binding Dostupnost}"/>
+        <Button Content="Dodaj" BorderBrush="Crimson" BorderThickness="4" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="10,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Dodaj}" IsEnabled="{Binding Dostupnost}"/>
+        <Button Content="Obrisi" BorderBrush="Crimson" BorderThickness="4" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="392,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Obrisi}" IsEnabled="{Binding Dostupnost}"/>
+        <!--<Button Content="Izmeni" BorderBrush="Crimson" BorderThickness="2" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="200,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Izmeni}" IsEnabled="{Binding Dostupnost}"/>
 -->
-        <DataGrid BorderBrush="Crimson" BorderThickness="2" ItemsSource="{Binding Path=Lista, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Izabrani}" AutoGenerateColumns="False" Height="280" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="567" SelectionMode="Single" IsReadOnly="True">
+        <DataGrid BorderBrush="Crimson" BorderThickness="4" ItemsSource="{Binding Path=Lista, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Izabrani}" AutoGenerateColumns="False" Height="280" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="567" SelectionMode="Single" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Width="*" Binding="{Binding br}" />
                 <DataGridTextColumn Header="Red" Width="*" Binding="{Binding red}" />
@@ -29,5 +29,16 @@
 
         <TextBlock x:Name="textBlockIspis" Foreground="White" FontSize="20" TextWrapping="Wrap" TextAlignment="Center" Margin="10,559,17,5" />
 
+        <Label HorizontalContentAlignment="Center" Content="Tip:" Background="Transparent" Foreground="DarkRed" FontSize="22" FontWeight="Bold" Margin="582,79,10,494"/>
+        <ComboBox x:Name="tipComboBox" FontSize="22" FontWeight="Bold" Margin="582,132,10,414" SelectedValue="{Binding Path=FilterTip}">
+            <ComboBoxItem Name="Red">Red</ComboBoxItem>
+            <ComboBoxItem Name="Sediste">Sediste</ComboBoxItem>
+            <ComboBoxItem Name="Dan">Dan</ComboBoxItem>
+            <ComboBoxItem Name="Sat">Sat</ComboBoxItem>
+            <ComboBoxItem Name="Cena">Cena</ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="filterTextBox" TextWrapping="Wrap" FontSize="22" FontWeight="Bold" Margin="582,225,10,317"/>
+        <Button Content="Filtriraj" BorderBrush="Crimson" BorderThickness="4" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="592,346,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Filtriraj}" IsEnabled="{Binding Dostupnost}"/>
+        <Button Content="Prebaci u fajl" BorderBrush="Crimson" BorderThickness="4" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="592,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding PrebaciUFajl}" IsEnabled="{Binding Dostupnost}"/>
     </Grid>
 </Window>

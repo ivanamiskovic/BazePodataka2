@@ -36,8 +36,8 @@
         <Label Content="SefDirigent:" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Left" Margin="370,152,0,0" VerticalAlignment="Top" Width="81"/>
         <ListBox x:Name="listBox2" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="98" Width="177" Margin="307,183,0,0" VerticalAlignment="Top"/>
 
-        <Button x:Name="dodaj" Foreground="Black" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="2" Content="Dodaj" HorizontalAlignment="Left" Margin="10,343,0,0" VerticalAlignment="Top" Width="75" Click="dodaj_Click"/>
-        <Button x:Name="vrati_se" Foreground="Black" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="2" Content="Vrati se" HorizontalAlignment="Left" Margin="206,343,0,0" VerticalAlignment="Top" Width="76" Click="vrati_se_Click" RenderTransformOrigin="0.592,-0.818"/>
+        <Button x:Name="dodaj" Foreground="Black" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="4" Content="Dodaj" HorizontalAlignment="Left" Margin="10,445,0,0" VerticalAlignment="Top" Width="75" Click="dodaj_Click" RenderTransformOrigin="0.483,5.49"/>
+        <Button x:Name="vrati_se" Foreground="Black" FontWeight="Bold" Background="Transparent" BorderBrush="Crimson" BorderThickness="4" Content="Vrati se" HorizontalAlignment="Left" Margin="196,445,0,0" VerticalAlignment="Top" Width="76" Click="vrati_se_Click" RenderTransformOrigin="0.592,-0.818"/>
 
         <TextBlock x:Name="textBlockUspeh" TextWrapping="Wrap" TextAlignment="Center" Foreground="Green" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,404,0,0" Width="272" Height="25" />
 

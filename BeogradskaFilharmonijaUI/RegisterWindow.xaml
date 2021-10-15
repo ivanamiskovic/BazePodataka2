@@ -11,19 +11,18 @@
             <ImageBrush ImageSource="C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\muzika.jpg"/>
         </Grid.Background>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-			<Label HorizontalContentAlignment="Center" Content="Korisnicko ime:" Background="Transparent" Foreground="DarkRed" FontSize="22" FontWeight="Bold"/>
-			<TextBox x:Name="korisnickoImeTextBox" Height="45" TextWrapping="Wrap" FontSize="22" FontWeight="Bold"/>
-			<Label HorizontalContentAlignment="Center" Content="Sifra:" Background="Transparent" Foreground="DarkRed" FontSize="22" FontWeight="Bold"/>
-			<PasswordBox x:Name="sifraBox" Height="45" FontSize="22" FontWeight="Bold"/>
-			<Label HorizontalContentAlignment="Center" Content="Uloga:" Background="Transparent" Foreground="DarkRed" FontSize="22" FontWeight="Bold"/>
-			<ComboBox x:Name="ulogaComboBox" Height="45" FontSize="22" FontWeight="Bold">
-				<ComboBoxItem Name="Admin">Admin</ComboBoxItem>
-				<ComboBoxItem Name="Dispecer">Dispecer</ComboBoxItem>
-				<ComboBoxItem Name="Kupac">Kupac</ComboBoxItem>
-			</ComboBox>
-			<Button Content="Registruj se" Click="RegistrujSe_Click" Background="Transparent" Foreground="DarkRed" FontSize="22" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Margin="0 10"/>
-			<Button Content="Imam vec nalog, uloguj se!" Click="UlogujSe_Click" Background="Transparent" Foreground="DarkRed" FontSize="22" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Margin="0 10"/>
-			<TextBlock x:Name="textBlockUspeh" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" Height="45" Width="400"/>
-		</StackPanel>
-	</Grid>
+            <Label HorizontalContentAlignment="Center" Content="Korisnicko ime:" Background="Transparent" Foreground="DarkRed" FontSize="22" FontWeight="Bold"/>
+            <TextBox x:Name="korisnickoImeTextBox" Height="45" TextWrapping="Wrap" FontSize="22" FontWeight="Bold"/>
+            <Label HorizontalContentAlignment="Center" Content="Sifra:" Background="Transparent" Foreground="DarkRed" FontSize="22" FontWeight="Bold"/>
+            <PasswordBox x:Name="sifraBox" Height="45" FontSize="22" FontWeight="Bold"/>
+            <Label HorizontalContentAlignment="Center" Content="Uloga:" Background="Transparent" Foreground="DarkRed" FontSize="22" FontWeight="Bold"/>
+            <ComboBox x:Name="ulogaComboBox" Height="45" FontSize="22" FontWeight="Bold">
+                <ComboBoxItem Name="Dispecer">Dispecer</ComboBoxItem>
+                <ComboBoxItem Name="Kupac">Kupac</ComboBoxItem>
+            </ComboBox>
+            <Button Content="Registruj se" Click="RegistrujSe_Click" Background="Transparent" Foreground="DarkRed" FontSize="22" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Margin="0 10"/>
+            <Button Content="Imam vec nalog, uloguj se!" Click="UlogujSe_Click" Background="Transparent" Foreground="DarkRed" FontSize="22" FontWeight="Bold" BorderBrush="Crimson" BorderThickness="2" Margin="0 10"/>
+            <TextBlock x:Name="textBlockUspeh" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" Height="45" Width="400"/>
+        </StackPanel>
+    </Grid>
 </Window>

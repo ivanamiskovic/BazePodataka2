@@ -12,8 +12,8 @@
         </Grid.Background>
         <TextBlock Text="Clan kluba" Foreground="Black" FontSize="30" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Margin="10,34,10,527" />
 
-		<Button Content="Dodaj" BorderBrush="Purple" BorderThickness="2" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="10,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Dodaj}" IsEnabled="{Binding Dostupnost}"/>
-		<Button Content="Obrisi" BorderBrush="Purple" BorderThickness="2" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="226,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Obrisi}" IsEnabled="{Binding Dostupnost}"/>
+		<Button Content="Dodaj" BorderBrush="Purple" BorderThickness="4" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="10,435,0,0" VerticalAlignment="Top" Width="165" Height="45" Command="{Binding Dodaj}" IsEnabled="{Binding Dostupnost}"/>
+		<Button Content="Obrisi" BorderBrush="Purple" BorderThickness="4" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="462,435,0,0" VerticalAlignment="Top" Width="165" Height="45" Command="{Binding Obrisi}" IsEnabled="{Binding Dostupnost}"/>
 		<!--<Button Content="Izmeni" BorderBrush="Purple" BorderThickness="2" Foreground="Black" FontSize="25" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="443,435,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Izmeni}" IsEnabled="{Binding Dostupnost}"/>
         -->
         <DataGrid BorderBrush="Crimson" BorderThickness="2" ItemsSource="{Binding Path=Lista, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Izabrani}" AutoGenerateColumns="False" Height="280" HorizontalAlignment="Left" Margin="5,130,0,0" VerticalAlignment="Top" Width="629" SelectionMode="Single" IsReadOnly="True">

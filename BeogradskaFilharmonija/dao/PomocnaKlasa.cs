@@ -13,7 +13,8 @@ namespace BeogradskaFilharmonija.dao
         public static List<int> IDListBox(ListBox lista, string opis)
         {
             List<int> povratna = new List<int>();
-            try {
+            try
+            {
                 foreach (var item in lista.Items)
                 {
                     CheckBox cb = (CheckBox)item;
@@ -24,19 +25,19 @@ namespace BeogradskaFilharmonija.dao
                         string[] reci = natpis.Split(' ');
                         int id = 0;
                         if (opis == "sale")
-                             id = Convert.ToInt32(reci[0]);
+                            id = Convert.ToInt32(reci[0]);
                         else
-                             id = Convert.ToInt32(reci[1]);
+                            id = Convert.ToInt32(reci[1]);
 
-                       
+
                         povratna.Add(id);
                     }
                 }
-            } 
+            }
             catch
             {
             }
-        
+
             return povratna;
         }
 
@@ -114,7 +115,7 @@ namespace BeogradskaFilharmonija.dao
             {
                 try
                 {
-                    koncertSet koncert = db.koncertSet.Where(c => c.idkon  ==  id).FirstOrDefault();
+                    koncertSet koncert = db.koncertSet.Where(c => c.idkon == id).FirstOrDefault();
 
                     foreach (var item in koncert.sef_dirigentSet)
                     {
@@ -131,7 +132,7 @@ namespace BeogradskaFilharmonija.dao
         }
 
         public static Korisnik ProveriDaliPostojiKorisnik(string korisnickoIme, string sifra)
-		{
+        {
             using (var db = new BeogradskaFilharmonijaModelEntities())
             {
                 try
@@ -140,9 +141,9 @@ namespace BeogradskaFilharmonija.dao
                     {
                         int duzina = item.KorisnickoIme.Length;
                         if (item.KorisnickoIme == korisnickoIme || item.Sifra == sifra)
-						{
+                        {
                             return item;
-						}
+                        }
                     }
                 }
                 catch
@@ -152,6 +153,30 @@ namespace BeogradskaFilharmonija.dao
             }
 
             return null;
+        }
+
+        //TODO DODATO
+        public static bool DaliJeKorisnikOdobren(string korisnickoIme)
+        {
+            using (var db = new BeogradskaFilharmonijaModelEntities())
+            {
+                try
+                {
+                    foreach (var item in db.Korisnik)
+                    {
+                        if (item.KorisnickoIme == korisnickoIme && item.Odobreno == 1)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+
+            return false;
         }
     }
 }

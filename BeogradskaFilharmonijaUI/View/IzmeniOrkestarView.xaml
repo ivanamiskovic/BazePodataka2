@@ -22,8 +22,8 @@
         <TextBox x:Name="textBox2" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="23" Margin="105,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" TextChanged="textBox2_TextChanged"/>
         <TextBlock x:Name="textBlock2" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,152,0,0" Width="272" Height="25" />
 
-        <Button x:Name="dodaj" Content="Izmeni" Foreground="Black" BorderBrush="Crimson" BorderThickness="2" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="10,182,0,0" VerticalAlignment="Top" Width="75" Click="izmeni_Click"/>
-        <Button x:Name="vrati_se" Content="Vrati se" Foreground="Black" BorderBrush="Crimson" BorderThickness="2" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="206,182,0,0" VerticalAlignment="Top" Width="76" Click="vrati_se_Click"/>
+        <Button x:Name="dodaj" Content="Izmeni" Foreground="Black" BorderBrush="Crimson" BorderThickness="4" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="10,182,0,0" VerticalAlignment="Top" Width="75" Click="izmeni_Click"/>
+        <Button x:Name="vrati_se" Content="Vrati se" Foreground="Black" BorderBrush="Crimson" BorderThickness="4" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="206,182,0,0" VerticalAlignment="Top" Width="76" Click="vrati_se_Click"/>
 
         <TextBlock x:Name="textBlockUspeh" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,209,0,0" Width="272" Height="25" />
 

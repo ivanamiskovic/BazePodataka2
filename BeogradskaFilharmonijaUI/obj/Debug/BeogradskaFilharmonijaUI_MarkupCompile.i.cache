@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Ivana\Desktop\NE BRISI\BeogradskaFilharmonija\BeogradskaFilharmonijaUI\App.xaml
-27-1454143135
+28945184932
 6-502881758
-64-2139146425
+671927486938
 1322087032038
-LogInWindow.xaml;RegisterWindow.xaml;View\DvoranaView.xaml;View\KartaView.xaml;View\IzmeniDvoranaView.xaml;View\DodajDvoranaView.xaml;MainWindow.xaml;View\ClanKlubaView.xaml;View\DodajClanKlubaView.xaml;View\DodajKartuView.xaml;View\DodajKoncertView.xaml;View\DodajOrkestarView.xaml;View\DodajPosetiocaView.xaml;View\DodajSaluView.xaml;View\DodajSefa_dirigentaView.xaml;View\IzmeniClanKlubaView.xaml;View\IzmeniKartuView.xaml;View\IzmeniKoncertView.xaml;View\IzmeniOrkestarView.xaml;View\IzmeniSaluView.xaml;View\IzmeniSefa_dirigentaView.xaml;View\KoncertView.xaml;View\OrkestarView.xaml;View\OrkestarZanrView.xaml;View\PosetilacView.xaml;View\SalaView.xaml;View\Sef_dirigentView.xaml;
+LogInWindow.xaml;OdobriView.xaml;RegisterWindow.xaml;View\DvoranaView.xaml;View\KartaView.xaml;View\IzmeniDvoranaView.xaml;View\DodajDvoranaView.xaml;MainWindow.xaml;View\ClanKlubaView.xaml;View\DodajClanKlubaView.xaml;View\DodajKartuView.xaml;View\DodajKoncertView.xaml;View\DodajOrkestarView.xaml;View\DodajPosetiocaView.xaml;View\DodajSaluView.xaml;View\DodajSefa_dirigentaView.xaml;View\IzmeniClanKlubaView.xaml;View\IzmeniKartuView.xaml;View\IzmeniKoncertView.xaml;View\IzmeniOrkestarView.xaml;View\IzmeniSaluView.xaml;View\IzmeniSefa_dirigentaView.xaml;View\KoncertView.xaml;View\OrkestarView.xaml;View\OrkestarZanrView.xaml;View\PosetilacView.xaml;View\SalaView.xaml;View\Sef_dirigentView.xaml;
 
-True
+False
 

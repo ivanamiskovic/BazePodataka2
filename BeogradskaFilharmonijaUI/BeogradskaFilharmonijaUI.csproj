@@ -133,6 +133,7 @@
     <Compile Include="Command\DodajDvoranu.cs" />
     <Compile Include="Command\DodajSalu.cs" />
     <Compile Include="Command\DodajSefa_dirigenta.cs" />
+    <Compile Include="Command\FiltrirajKartu.cs" />
     <Compile Include="Command\IzmeniClanKluba.cs" />
     <Compile Include="Command\IzmeniDvoranu.cs" />
     <Compile Include="Command\IzmeniKartu.cs" />
@@ -148,9 +149,13 @@
     <Compile Include="Command\ObrisiDvoranu.cs" />
     <Compile Include="Command\ObrisiSalu.cs" />
     <Compile Include="Command\ObrisiSefa_dirigenta.cs" />
+    <Compile Include="Command\PrebaciUFajlKartu.cs" />
     <Compile Include="GlobalnaKorisnickaKlasa.cs" />
     <Compile Include="LogInWindow.xaml.cs">
       <DependentUpon>LogInWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OdobriView.xaml.cs">
+      <DependentUpon>OdobriView.xaml</DependentUpon>
     </Compile>
     <Compile Include="RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
@@ -236,6 +241,10 @@
       <DependentUpon>Sef_dirigentView.xaml</DependentUpon>
     </Compile>
     <Page Include="LogInWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OdobriView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -17,8 +17,8 @@
         <Label Content="Karte :" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="listBox" BorderBrush="Crimson" BorderThickness="2" HorizontalAlignment="Left" Height="98" Width="297" VerticalAlignment="Top" Margin="57,71,0,0"/>
 
-        <Button x:Name="dodaj" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" Foreground="Black" FontWeight="Bold" Content="Dodaj" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top" Width="75" Click="dodaj_Click"/>
-        <Button x:Name="vrati_se" BorderBrush="Crimson" BorderThickness="2" Background="Transparent" Foreground="Black" FontWeight="Bold" Content="Vrati se" HorizontalAlignment="Left" Margin="278,181,0,0" VerticalAlignment="Top" Width="76" Click="vrati_se_Click"/>
+        <Button x:Name="dodaj" BorderBrush="Crimson" BorderThickness="4" Background="Transparent" Foreground="Black" FontWeight="Bold" Content="Dodaj" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top" Width="75" Click="dodaj_Click"/>
+        <Button x:Name="vrati_se" BorderBrush="Crimson" BorderThickness="4" Background="Transparent" Foreground="Black" FontWeight="Bold" Content="Vrati se" HorizontalAlignment="Left" Margin="308,182,0,0" VerticalAlignment="Top" Width="76" Click="vrati_se_Click"/>
 
         <TextBlock x:Name="textBlockUspeh" TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,208,0,0" Width="344" Height="25" />
 

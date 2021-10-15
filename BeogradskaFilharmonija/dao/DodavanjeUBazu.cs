@@ -16,23 +16,23 @@ namespace BeogradskaFilharmonija.dao
             {
                 try
                 {
-                    
-                        dvorana = new dvoranaSet();
-                     
-                        dvorana.mest = mesto;
-                        dvorana.nazdv = naziv;
-                        dvorana.ul = ulica;
-                        dvorana.br = broj;
 
-                        db.dvoranaSet.Add(dvorana);
-                        db.SaveChanges();
+                    dvorana = new dvoranaSet();
 
-                        return true;
+                    dvorana.mest = mesto;
+                    dvorana.nazdv = naziv;
+                    dvorana.ul = ulica;
+                    dvorana.br = broj;
 
-                    
+                    db.dvoranaSet.Add(dvorana);
+                    db.SaveChanges();
+
+                    return true;
+
+
 
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
                     return false;
@@ -105,7 +105,7 @@ namespace BeogradskaFilharmonija.dao
                     dvorana = db.dvoranaSet.Where(c => c.iddvor.Equals(idDvorane)).FirstOrDefault();
 
                     sala = new salaSet();
-                        
+
                     sala.brsed = sediste;
                     sala.velsce = scena;
 
@@ -118,7 +118,7 @@ namespace BeogradskaFilharmonija.dao
                     return true;
 
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
 
@@ -137,7 +137,7 @@ namespace BeogradskaFilharmonija.dao
                 try
                 {
                     izvodjenje = db.izvodjenjeSet.Where(c => c.sala_idsal_izvodjenje.Equals(idSale)).FirstOrDefault();
-                    
+
                     karta = new kartaSet();
                     // karta.br = id;
                     karta.red = red;
@@ -152,11 +152,11 @@ namespace BeogradskaFilharmonija.dao
 
                     db.kartaSet.Add(karta);
                     db.SaveChanges();
-               
+
                     return true;
 
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
                     return false;
@@ -229,7 +229,7 @@ namespace BeogradskaFilharmonija.dao
             {
                 try
                 {
-                    
+
                     koncert = new koncertSet();
 
                     koncert.traj = trajanje;
@@ -239,7 +239,7 @@ namespace BeogradskaFilharmonija.dao
                     db.koncertSet.Add(koncert);
                     db.SaveChanges();
 
-                
+
 
 
                     foreach (var item in idSale)
@@ -251,7 +251,7 @@ namespace BeogradskaFilharmonija.dao
                         izvodjenje.sala_idsal_izvodjenje = item;
                         izvodjenje.salaSet = sala;
                         izvodjenje.sala_dvorana_iddvor_izvodjenje = sala.dvorana_iddvor_sala;
-                        
+
                         izvodjenje.koncertSet = koncert;
 
                         db.izvodjenjeSet.Add(izvodjenje);
@@ -276,7 +276,7 @@ namespace BeogradskaFilharmonija.dao
                     }
 
                     return 5;
-                
+
                 }
                 catch
                 {
@@ -285,7 +285,7 @@ namespace BeogradskaFilharmonija.dao
             }
 
         }
-        public static bool DodajOrkestar( string ime,Int32 brclan)
+        public static bool DodajOrkestar(string ime, Int32 brclan)
         {
             orkestarSet orkestar;
 
@@ -293,17 +293,17 @@ namespace BeogradskaFilharmonija.dao
             {
                 try
                 {
-                   
-                        orkestar = new orkestarSet();
-                      //  orkestar.id = id;
-                        orkestar.imeork = ime;
-                        orkestar.brclan = brclan;
 
-                        db.orkestarSet.Add(orkestar);
-                        db.SaveChanges();
+                    orkestar = new orkestarSet();
+                    //  orkestar.id = id;
+                    orkestar.imeork = ime;
+                    orkestar.brclan = brclan;
 
-                        return true;
-                    
+                    db.orkestarSet.Add(orkestar);
+                    db.SaveChanges();
+
+                    return true;
+
                 }
                 catch
                 {
@@ -322,7 +322,7 @@ namespace BeogradskaFilharmonija.dao
                 try
                 {
                     sef_dirigent = new sef_dirigentSet();
-                    
+
                     sef_dirigent.imed = ime;
                     sef_dirigent.prezdir = prezime;
 
@@ -330,7 +330,7 @@ namespace BeogradskaFilharmonija.dao
                     db.SaveChanges();
 
                     return true;
-                    
+
                 }
                 catch
                 {
@@ -339,6 +339,7 @@ namespace BeogradskaFilharmonija.dao
             }
         }
 
+        //TODO IZMENJENO
         public static bool DodajKorisnika(string korisnickoIme, string sifra, string uloga)
         {
             Korisnik korisnik;
@@ -352,6 +353,7 @@ namespace BeogradskaFilharmonija.dao
                     korisnik.KorisnickoIme = korisnickoIme;
                     korisnik.Sifra = sifra;
                     korisnik.Uloga = uloga;
+                    korisnik.Odobreno = 0;
 
                     db.Korisnik.Add(korisnik);
                     db.SaveChanges();

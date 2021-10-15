@@ -11,11 +11,13 @@ using System.Threading.Tasks;
 
 namespace BeogradskaFilharmonijaUI.ViewModel
 {
+    //TODO IZMENJENO
     public class KartaModel : INotifyPropertyChanged
     {
         private List<kartaSet> lista;
         private kartaSet izabrani;
         private bool dostupnost;
+        private string filterTip;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -30,12 +32,16 @@ namespace BeogradskaFilharmonijaUI.ViewModel
         public DodajKartu Dodaj { get; set; }
         public ObrisiKartu Obrisi { get; set; }
         public IzmeniKartu Izmeni { get; set; }
+        public FiltrirajKartu Filtriraj { get; set; }
+        public PrebaciUFajlKartu PrebaciUFajl { get; set; }
 
         public KartaModel(KartaView viewParam)
         {
             this.Dodaj = new DodajKartu(this, viewParam);
             this.Obrisi = new ObrisiKartu(this, viewParam);
             this.Izmeni = new IzmeniKartu(this, viewParam);
+            this.Filtriraj = new FiltrirajKartu(this, viewParam);
+            this.PrebaciUFajl = new PrebaciUFajlKartu(this, viewParam);
 
             lista = CitanjeIzBaze.VratiKarte();
         }
@@ -71,6 +77,16 @@ namespace BeogradskaFilharmonijaUI.ViewModel
             {
                 dostupnost = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("Dostupnost"));
+            }
+        }
+
+        public string FilterTip
+        {
+            get { return filterTip; }
+            set
+            {
+                filterTip = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("FilterTip"));
             }
         }
 

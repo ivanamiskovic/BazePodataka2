@@ -12,8 +12,8 @@
         </Grid.Background>
         <TextBlock Text="Posetioci" FontSize="30" Foreground="Black" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Margin="10,33,10,509" />
 
-        <Button Content="Dodaj" BorderBrush="Crimson" BorderThickness="2" FontSize="25" Foreground="Black" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="10,438,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Dodaj}"/>
-        <Button Content="Obrisi" FontSize="25" BorderBrush="Crimson" BorderThickness="2" Foreground="Black" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="442,438,0,0" VerticalAlignment="Top" Width="185" Height="64" Command="{Binding Obrisi}"/>
+        <Button Content="Dodaj" BorderBrush="Crimson" BorderThickness="4" FontSize="25" Foreground="Black" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="10,438,0,0" VerticalAlignment="Top" Width="165" Height="45" Command="{Binding Dodaj}"/>
+        <Button Content="Obrisi" FontSize="25" BorderBrush="Crimson" BorderThickness="4" Foreground="Black" FontWeight="Bold" Background="Transparent" HorizontalAlignment="Left" Margin="442,438,0,0" VerticalAlignment="Top" Width="165" Height="45" Command="{Binding Obrisi}"/>
 
         <DataGrid BorderBrush="Crimson" BorderThickness="2" ItemsSource="{Binding Path=Lista, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Izabrani}" AutoGenerateColumns="False" Height="280" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="617" SelectionMode="Single" IsReadOnly="True">
             <DataGrid.Columns>

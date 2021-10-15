@@ -212,7 +212,7 @@ namespace BeogradskaFilharmonija.dao
                     clan_Kluba.jmbg = jmbg;
                     clan_Kluba.imeck = imeck;
                     clan_Kluba.prezck = przck;
-                   
+
                     clan_Kluba.datrodj = datrodj;
 
                     db.Entry(clan_Kluba).State = System.Data.Entity.EntityState.Modified;
@@ -222,6 +222,31 @@ namespace BeogradskaFilharmonija.dao
                 catch
                 {
                     return 2;
+                }
+            }
+        }
+
+        //TOOD DODATO
+        public static bool OdobriKorisnika(string korisnickoIme)
+        {
+            Korisnik korisnik;
+
+            using (var db = new BeogradskaFilharmonijaModelEntities())
+            {
+                korisnik = db.Korisnik.Where(c => c.KorisnickoIme.Equals(korisnickoIme)).FirstOrDefault();
+
+                try
+                {
+                    korisnik.Odobreno = 1;
+
+                    db.Entry(korisnik).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+
+                    return true;
+                }
+                catch
+                {
+                    return false;
                 }
             }
         }

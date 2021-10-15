@@ -21,6 +21,12 @@ namespace BeogradskaFilharmonijaUI
         public MainWindow()
         {
             InitializeComponent();
+
+            //TODO DODATO
+            if (GlobalnaKorisnickaKlasa.korisnik.Uloga != "Admin")
+            {
+                buttonOdobri.Visibility = Visibility.Hidden;
+            }
         }
 
         private void buttonDvorana_Click(object sender, RoutedEventArgs e)
@@ -77,13 +83,20 @@ namespace BeogradskaFilharmonijaUI
             view.ShowDialog();
         }
 
-		private void buttonOdjaviSe_Click(object sender, RoutedEventArgs e)
-		{
+        private void buttonOdjaviSe_Click(object sender, RoutedEventArgs e)
+        {
             GlobalnaKorisnickaKlasa.korisnik = null;
 
             LogInWindow view = new LogInWindow();
             Close();
             view.ShowDialog();
         }
-	}
+
+        //TODO DODATO
+        private void buttonOdobri_Click(object sender, RoutedEventArgs e)
+        {
+            OdobriView view = new OdobriView();
+            view.ShowDialog();
+        }
+    }
 }
